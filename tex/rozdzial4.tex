@@ -1,6 +1,54 @@
 	\newpage
 \section{Implementacja}		%4
 %Wkleić szkielet kodu, wraz z komentarzami. Opisać zmienne, struktury do czego służą. Opisać procedury, metody co wykonują. Opisać nowe zdefiniowane klasy. Opisać dziedziczenie. Opisać nowo utworzone pliki za co odpowiadają.
+\subsection{Pierwsze kroki}
+\textit
+{
+	Po stworzeniu projektu poznawaliśmy strukturę oraz działanie aplikacji próbując modyfikować istniejące już klasy. Po zapoznaniu się z podstawami realizowaliśmy dalsze tutoriale aby 			swobodnie pracować w środowisku Xamarin'a.
+}
+
+\subsection{Modyfikacja menu}
+
+\textit
+{
+	Pierwszym zadaniem było ustalenie szaty graficznej, widoku podstawowego z przyciskiem oraz menu. Aby to zrobić należało wykonać następujące czynności:\\\\
+	-Dopisać odpowiednie właściwości do kodu XML typu background color, font-size, padding, textcolor itp. aby wystylizować układ widoku.\\\\
+	Fragment modyfikacji:
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges1.png}
+			\caption{Zmiany styli}
+			\label{rys:Zmiany styli}
+		\end{center}
+	\end{figure}
+}
+
+\newpage
+\textit
+{
+	-Stworzyć widok główny na podstawie języka XML oraz metody w języku C\# informującej o kliknięciu w przycisk.\\\\
+	Fragment modyfikacji:
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges2.png}
+			\caption{Implementacja widoku}
+			\label{rys:Implementacja widoku}
+		\end{center}
+	\end{figure}
+}
+
+\textit
+{
+	-Pobrać i zainstalować paczkę 'acr' z nuget packages, zaimplementować opcję alertu, zaktualizować wersję xamarin.forms z 5.0.0.2012 do 5.0.0.2125 z powodu konfliktu biblioteki 				emulującej android w języku java \\\\
+	Zmiany widoczne w kodzie:
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges3.png}
+			\caption{Modyfikacja nuget packages}
+			\label{rys:Modyfikacja nuget packages}
+		\end{center}
+	\end{figure}
+}
 
 
 
