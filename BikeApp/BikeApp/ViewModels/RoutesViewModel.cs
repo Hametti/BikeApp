@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace BikeApp.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class RoutesViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -17,9 +17,9 @@ namespace BikeApp.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public RoutesViewModel()
         {
-            Title = "Browse";
+            Title = "Your routes";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

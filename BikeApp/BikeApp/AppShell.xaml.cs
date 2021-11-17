@@ -15,9 +15,10 @@ namespace BikeApp
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }
 
+        //Code that will be executed after clicking on item with "OnMenuItemClicked" attribute
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            //await Shell.Current.GoToAsync("//LoginPage");
         }
     }
 }

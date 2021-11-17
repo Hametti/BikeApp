@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Background">#292929</Color>
             <Style TargetType="Grid">
                 <Setter Property="ColumnSpacing" Value="0" />
                 <Setter Property="RowSpacing" Value="0" />

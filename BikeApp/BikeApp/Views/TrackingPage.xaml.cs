@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 
 namespace BikeApp.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class TrackingPage : ContentPage
     {
-        public AboutPage()
+        public TrackingPage()
         {
             InitializeComponent();
         }

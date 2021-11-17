@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace BikeApp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class TrackingViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public TrackingViewModel()
         {
             //Name of current tab
             Title = "BikeApp";
