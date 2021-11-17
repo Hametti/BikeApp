@@ -7,7 +7,7 @@
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
-        <vm:SettingsViewModel />
+        <vm:MeasurementViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
