@@ -24,11 +24,67 @@
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
-            <StackLayout Padding="0, 20, 0, 20">
-                <Label Text="There will be a main page here" 
+            <StackLayout Padding="30, 20, 30, 20"
+                         Orientation="Vertical">
+                
+                <Label Text="BikeApp - an application for any biker, anytime, anywhere." 
+                       FontSize="Title" 
+                       TextColor="White" 
+                       HorizontalTextAlignment="Center" />
+                <Label Text="Use the sidebar in the corner to get started!" 
                        FontSize="Medium" 
                        TextColor="White" 
                        HorizontalTextAlignment="Center" />
+
+                <Label Text="Track your activity when driving" 
+                        FontSize="Title" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center"
+                        Margin="0,50,0,0" />
+                <Label Text="Launch &quot;Start Tracking&quot; functionality, select your target from the map and let BikeApp guide you to the destination." 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center" />
+
+                <Label Text="Store your favourite routes" 
+                        FontSize="Title" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center"
+                        Margin="0,50,0,0" />
+                <Label Text="Often commuting from A to B? Go to &quot;Your Routes&quot; and add a route so that you'll never have to plot it again." 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center" />
+
+                <Label Text="See all the numbers describing how you drive" 
+                        FontSize="Title" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center"
+                        Margin="0,50,0,0" />
+                <Label Text="Try out &quot;Live Measurement&quot; to see your speed and g-force level updated in milliseconds." 
+                        FontSize="Medium"
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center" />
+
+                <Label Text="Access statistics regarding your past journeys" 
+                        FontSize="Title" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center"
+                        Margin="0,50,0,0" />
+                <Label Text="What was your average speed during your last journey? &quot;Statistics&quot; are here to store answers to such questions." 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center" />
+
+                <Label Text="Customize to your heart's content" 
+                        FontSize="Title" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center"
+                        Margin="0,50,0,0" />
+                <Label Text="Under &quot;Settings&quot; you can find conveniently grouped options and, of course, change them however you like." 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        HorizontalTextAlignment="Center" />
 
             </StackLayout>
         </ScrollView>
