@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,16 @@ namespace BikeApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        public int z { get; set; }
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((MainViewModel)BindingContext).DoSomething();
         }
     }
 }
