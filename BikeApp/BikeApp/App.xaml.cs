@@ -1,4 +1,6 @@
-﻿using BikeApp.Services;
+﻿using BikeApp.Data;
+using BikeApp.Data.Helpers;
+using BikeApp.Services;
 using BikeApp.Views;
 using System;
 using Xamarin.Forms;
@@ -11,8 +13,9 @@ namespace BikeApp
 
         public App()
         {
+            Initializer.LoadTheme();
+            DependencyService.Register<Services.Alert.IAlertService, Services.Alert.AlertService>();
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }

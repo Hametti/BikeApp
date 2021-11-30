@@ -5,6 +5,7 @@
              Title="{Binding Title}"
              xmlns:local="clr-namespace:BikeApp.ViewModels"  
              xmlns:model="clr-namespace:BikeApp.Models"  
+             xmlns:styles="clr-namespace:BikeApp.Data.Themes"  
              x:Name="RoutesViewModel"
              BackgroundColor="{StaticResource Background}">
 
@@ -22,18 +23,18 @@
                 SelectionMode="None">
             
             <CollectionView.ItemTemplate>
-                <DataTemplate >
+                <DataTemplate>
                     <StackLayout Padding="20" x:DataType="model:Item">
                         <Label Text="{Binding Text}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" 
-                            TextColor="White"/>
+                            TextColor="{Binding Source={x:Static styles:CurrentTheme.TextColor}}"/>
                         <Label Text="{Binding Description}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" 
-                            TextColor="White"/>
+                            TextColor="{Binding Source={x:Static styles:CurrentTheme.TextColor}}"/>
                         <BoxView Color="#BBBBBB" WidthRequest ="100" HeightRequest="1"/>
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
