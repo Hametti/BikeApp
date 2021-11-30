@@ -1,4 +1,5 @@
-﻿using BikeApp.Models;
+﻿using BikeApp.Data.Themes;
+using BikeApp.Models;
 using BikeApp.ViewModels;
 using BikeApp.Views;
 using System;
@@ -27,6 +28,12 @@ namespace BikeApp.Views
         {
             base.OnAppearing();
             _viewModel.OnAppearing();
+            SetLayout();
+        }
+
+        private void SetLayout()
+        {
+            ((ContentPage)FindByName("RoutesViewModel")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
         }
     }
 }

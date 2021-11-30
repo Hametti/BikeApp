@@ -4,12 +4,20 @@ using System.Text;
 
 namespace BikeApp.Data.Themes
 {
-    public class CurrentTheme
+    public static class CurrentTheme
     {
-        public static ThemeModel CurrentLayout;
+        public static string BackgroundColor1 { get; set; }
+        public static string BackgroundColor2 { get; set; }
+        public static string BackgroundColor3 { get; set; }
+        public static string ButtonColor { get; set; }
+        public static string TextColor { get; set; }
         public static void SetTheme(ThemeModel theme)
         {
-            CurrentLayout = theme;
+            BackgroundColor1 = theme.BackgroundColor1;
+            BackgroundColor2 = theme.BackgroundColor2;
+            BackgroundColor3 = theme.BackgroundColor3;
+            ButtonColor = theme.ButtonColor;
+            TextColor = theme.TextColor;
         }
     }
 }

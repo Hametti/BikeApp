@@ -9,102 +9,134 @@
         <vm:MainViewModel />
     </ContentPage.BindingContext>
 
-    <RefreshView Refreshing="RefreshPage">
-        <Grid BackgroundColor="{StaticResource Background}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <StackLayout BackgroundColor="{Binding BackgroundColor1}" 
-                     VerticalOptions="FillAndExpand" 
-                     HorizontalOptions="Fill" 
-                     Margin="0,0,0,0">
-                <StackLayout Orientation="Horizontal" 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout 
+            x:Name="Logo" 
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="Fill" 
+            Margin="0,0,0,0">
+            <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center" 
                          VerticalOptions="Center">
-                    <ContentView Padding="0,20,0,20" 
+                <ContentView Padding="0,20,0,20" 
                              VerticalOptions="FillAndExpand">
-                        <Image Source="bikeapp.png" 
+                    <Image Source="bikeapp.png" 
                            VerticalOptions="Center" 
                            HeightRequest="100" />
-                    </ContentView>
-                </StackLayout>
+                </ContentView>
             </StackLayout>
-            <ScrollView Grid.Row="1">
-                <StackLayout Padding="30, 20, 30, 20"
-                         Orientation="Vertical"
-                         x:Name="LayoutTest">
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout 
+                x:Name="Content"
+                Padding="30, 20, 30, 20"
+                Orientation="Vertical">
+                
+                <!-- Sample code segment how to interact with ViewModel from xaml file -->
+                <!-- <Button
+                    x:
+                    Margin="0,10,0,0" Text="Change color"
+                    BackgroundColor="#4934eb"
+                    TextColor="White" 
+                    Command="{Binding ChangeSomething}"
+                    CommandParameter="{x:Reference ContentBackground}"/> -->
+                
+                <Label 
+                    x:Name="Label1"
+                    Text="BikeApp - an application for any biker, anytime, anywhere." 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
+                
+                <Label 
+                    x:Name="Label2"
+                    Text="Use the sidebar in the corner to get started!" 
+                    FontSize="Medium" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Button Margin="0,10,0,0" Text="Change color"
-                        BackgroundColor="#4934eb"
-                        TextColor="White" 
-                        Command="{Binding ChangeSomething}"
-                        CommandParameter="{x:Reference LayoutTest}"/>
+                <Label 
+                    x:Name="Label3"
+                    Text="Track your activity when driving" 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"
+                    Margin="0,50,0,0" />
+                
+                <Label 
+                    x:Name="Label4"
+                    Text="Launch &quot;Start Tracking&quot; functionality, select your target from the map and let BikeApp guide you to the destination." 
+                    FontSize="Medium" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Label Text="{Binding MyMessage}"/>
-                    <Label Text="BikeApp - an application for any biker, anytime, anywhere." 
-                       FontSize="Title" 
-                       TextColor="White" 
-                       HorizontalTextAlignment="Center" />
-                    <Label Text="Use the sidebar in the corner to get started!" 
-                       FontSize="Medium" 
-                       TextColor="White" 
-                       HorizontalTextAlignment="Center" />
+                <Label 
+                    x:Name="Label5"
+                    Text="Store your favourite routes" 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"
+                    Margin="0,50,0,0" />
+                
+                <Label 
+                    x:Name="Label6"
+                    Text="Often commuting from A to B? Go to &quot;Your Routes&quot; and add a route so that you'll never have to plot it again." 
+                    FontSize="Medium" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Label Text="Track your activity when driving" 
-                        FontSize="Title" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center"
-                        Margin="0,50,0,0" />
-                    <Label Text="Launch &quot;Start Tracking&quot; functionality, select your target from the map and let BikeApp guide you to the destination." 
-                        FontSize="Medium" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center" />
+                <Label 
+                    x:Name="Label7"
+                    Text="See all the numbers describing how you drive" 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"
+                    Margin="0,50,0,0" />
+                
+                <Label 
+                    x:Name="Label8"
+                    Text="Try out &quot;Live Measurement&quot; to see your speed and g-force level updated in milliseconds." 
+                    FontSize="Medium"
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Label Text="Store your favourite routes" 
-                        FontSize="Title" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center"
-                        Margin="0,50,0,0" />
-                    <Label Text="Often commuting from A to B? Go to &quot;Your Routes&quot; and add a route so that you'll never have to plot it again." 
-                        FontSize="Medium" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center" />
+                <Label 
+                    x:Name="Label9"
+                    Text="Access statistics regarding your past journeys" 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"
+                    Margin="0,50,0,0" />
+                
+                <Label 
+                    x:Name="Label10"
+                    Text="What was your average speed during your last journey? &quot;Statistics&quot; are here to store answers to such questions." 
+                    FontSize="Medium" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Label Text="See all the numbers describing how you drive" 
-                        FontSize="Title" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center"
-                        Margin="0,50,0,0" />
-                    <Label Text="Try out &quot;Live Measurement&quot; to see your speed and g-force level updated in milliseconds." 
-                        FontSize="Medium"
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center" />
+                <Label 
+                    x:Name="Label11"
+                    Text="Customize to your heart's content" 
+                    FontSize="Title" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"
+                    Margin="0,50,0,0" />
+                
+                <Label 
+                    x:Name="Label12"
+                    Text="Under &quot;Settings&quot; you can find conveniently grouped options and, of course, change them however you like." 
+                    FontSize="Medium" 
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center" />
 
-                    <Label Text="Access statistics regarding your past journeys" 
-                        FontSize="Title" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center"
-                        Margin="0,50,0,0" />
-                    <Label Text="What was your average speed during your last journey? &quot;Statistics&quot; are here to store answers to such questions." 
-                        FontSize="Medium" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 
-                    <Label Text="Customize to your heart's content" 
-                        FontSize="Title" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center"
-                        Margin="0,50,0,0" />
-                    <Label Text="Under &quot;Settings&quot; you can find conveniently grouped options and, of course, change them however you like." 
-                        FontSize="Medium" 
-                        TextColor="White" 
-                        HorizontalTextAlignment="Center" />
-
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-    </RefreshView>
-    
 
 </ContentPage>

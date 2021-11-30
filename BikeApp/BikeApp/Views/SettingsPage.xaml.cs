@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeApp.Data.Themes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,28 @@ namespace BikeApp.Views
         public SettingsPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            SetLayout();
+        }
+        private void SetLayout()
+        {
+            ((ContentPage)FindByName("Content")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
+            ((Label)FindByName("Label1")).TextColor = Color.FromHex(CurrentTheme.TextColor);
+            ((Label)FindByName("Label2")).TextColor = Color.FromHex(CurrentTheme.TextColor);
+        }
+
+        private void Switch_Toggled(object sender, ToggledEventArgs isToggled)
+        {
+            if (isToggled.Value)
+                CurrentTheme.SetTheme(new DarkTheme());
+            else
+                CurrentTheme.SetTheme(new LightTheme());
+
+            SetLayout();
         }
     }
 }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BikeApp.Views.SettingsPage"
-             BackgroundColor="{StaticResource Background}"
+             x:Name="Content"
              xmlns:vm="clr-namespace:BikeApp.ViewModels"
              Title="{Binding Title}">
 
@@ -12,10 +12,59 @@
 
     <ContentPage.Content>
         <StackLayout Padding="0, 20, 0, 20">
-            <Label Text="There will be a settings page here"
-                   TextColor="White"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center" />
+            <Label 
+                x:Name="Label1"
+                Text="There will be a settings page here"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center" />
         </StackLayout>
     </ContentPage.Content>
+
+    <!--<StackLayout 
+        x:Name="switch"
+        Padding="20, 20, 20, 20"
+        Orientation="Horizontal">
+
+        <Label
+            x:Name="Label2"
+            Text="Dark mode"
+            HorizontalOptions="StartAndExpand"
+            HorizontalTextAlignment="Start"
+            TextColor="White"/>
+        
+        <Switch 
+            
+            HorizontalOptions="EndAndExpand"/>
+        
+
+    </StackLayout>-->
+
+    <Grid 
+        VerticalOptions="Start"
+        x:Name="switch"
+        Padding="20, 20, 20, 20">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label
+            x:Name="Label2"
+            VerticalTextAlignment="Center" 
+            Grid.Row="0" 
+            Grid.Column="0" 
+            Text="Dark mode"
+            FontSize="18">
+        </Label>
+        <Switch
+            IsToggled="True"
+            Toggled="Switch_Toggled"
+            OnColor="#878385"
+            ThumbColor="AliceBlue"
+            Grid.Row="0" 
+            Grid.Column="1" 
+            VerticalOptions="Center"/>
+    </Grid>
+
+
+
 </ContentPage>

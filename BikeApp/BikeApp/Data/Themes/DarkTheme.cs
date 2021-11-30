@@ -10,6 +10,8 @@ namespace BikeApp.Data.Themes
         {
             BackgroundColor1 = "#222222";
             BackgroundColor2 = "#333333";
+            BackgroundColor3 = "#444444";
+            ButtonColor = "#4934eb";
             TextColor = "#ffffff";
         }
     }

@@ -8,6 +8,8 @@ namespace BikeApp.Data.Themes
     {
         public string BackgroundColor1 { get; set; }
         public string BackgroundColor2 { get; set; }
+        public string BackgroundColor3 { get; set; }
+        public string ButtonColor { get; set; }
         public string TextColor { get; set; }
     }
 }
