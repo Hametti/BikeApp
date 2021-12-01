@@ -28,10 +28,10 @@ namespace BikeApp.Views
         {
             base.OnAppearing();
             _viewModel.OnAppearing();
-            SetLayout();
+            UpdateLayout();
         }
 
-        private void SetLayout()
+        private void UpdateLayout()
         {
             ((ContentPage)FindByName("RoutesViewModel")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
         }

@@ -27,10 +27,10 @@ namespace BikeApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SetLayout();
+            UpdateLayout();
         }
 
-        private void SetLayout()
+        private void UpdateLayout()
         {
             ((StackLayout)FindByName("Content")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
             ((Button)FindByName("TrackingButton")).BackgroundColor = Color.FromHex(CurrentTheme.ButtonColor);

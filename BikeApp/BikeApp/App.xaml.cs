@@ -1,6 +1,7 @@
 ﻿using BikeApp.Data;
 using BikeApp.Data.Helpers;
 using BikeApp.Services;
+using BikeApp.Services.Alert;
 using BikeApp.Views;
 using System;
 using Xamarin.Forms;

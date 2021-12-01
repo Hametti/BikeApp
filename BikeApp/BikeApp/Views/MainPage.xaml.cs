@@ -1,4 +1,5 @@
 ﻿using BikeApp.Data.Themes;
+using BikeApp.Services.Alert;
 using BikeApp.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -22,10 +23,10 @@ namespace BikeApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SetLayout();
+            UpdateLayout();
         }
 
-        private void SetLayout()
+        private void UpdateLayout()
         {
             ((StackLayout)FindByName("Logo")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
             ((StackLayout)FindByName("Content")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor2);

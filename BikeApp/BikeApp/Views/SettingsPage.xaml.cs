@@ -21,9 +21,9 @@ namespace BikeApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SetLayout();
+            UpdateLayout();
         }
-        private void SetLayout()
+        private void UpdateLayout()
         {
             ((ContentPage)FindByName("Content")).BackgroundColor = Color.FromHex(CurrentTheme.BackgroundColor1);
             ((Label)FindByName("Label1")).TextColor = Color.FromHex(CurrentTheme.TextColor);
@@ -37,7 +37,7 @@ namespace BikeApp.Views
             else
                 CurrentTheme.SetTheme(new LightTheme());
 
-            SetLayout();
+            UpdateLayout();
         }
     }
 }
