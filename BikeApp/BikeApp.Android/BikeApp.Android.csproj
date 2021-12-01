@@ -52,6 +52,7 @@
     <AndroidSigningStorePass>student</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>student</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>student</AndroidSigningKeyPass>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
