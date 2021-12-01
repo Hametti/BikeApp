@@ -156,3 +156,124 @@
 	\end{figure}
 }
 
+\newpage
+\subsection{Dodanie motywu jasnego i ciemnego}
+
+\textit
+{
+	Na początku należało utworzyć odpowiednie klasy przechowujące kolory \\
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=7.5cm]{rys/gitchanges4.2.10.png}
+			\caption{Układ klas}
+			\label{rys:Układ klas}
+		\end{center}
+	\end{figure}
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.11.png}
+			\caption{Abstrakcyjna klasa bazowa}
+			\label{rys:Abstrakcyjna klasa bazowa}
+		\end{center}
+	\end{figure}
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.12.png}
+			\caption{Przykładowy motyw dziedziczący po klasie bazowej}
+			\label{rys:Przykładowy motyw}
+		\end{center}
+	\end{figure}
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.13.png}
+			\caption{Klasa przechowująća aktualny motyw ustawiana na podstawie modelu abstrakcyjnego}
+			\label{rys:Klasa przechowująca aktualny motyw}
+		\end{center}
+	\end{figure}
+}
+{
+\newpage
+	Motyw to klasa dziedzicząca po klasie bazowej z odpowiednio skonfigurowanym konstruktorem, dzięki takiej konstrukcji w razie potrzeby dodania kolejnych motywów nie ma potrzeby modyfikacji klasy głównej. Wystarczy dodać dowolną liczbę nowych motywów w postaci klas oraz przypisać obiekt nowo powstałej klasy w klasie inicjalizującej.
+}
+
+\textit
+{
+\newpage
+	Kolejnym krokiem było stworzenie klasy przechowującej ustawiony motyw
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.13.png}
+			\caption{Klasa statyczna przechowująca motyw}
+			\label{rys:Klasa statyczna}
+		\end{center}
+	\end{figure}
+\\
+	Następnie należało stworzyć metodę inicjalizującą, która ustawia motyw oraz wywołać ją w momencie ładowania aplikacji.
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges4.2.14.png}
+			\caption{Klasa inicjalizująca}
+			\label{rys:Klasa inicjalizująca}
+		\end{center}
+	\end{figure}
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.15.png}
+			\caption{Klasa inicjalizująca - wywołanie}
+			\label{rys:Klasa inicjalizująca - wywołanie}
+		\end{center}
+	\end{figure}
+}
+
+\textit
+{
+\newpage
+	Potem należało napisać mechanizm aktualizujący widok po każdym załadowaniu
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges4.2.16.png}
+			\caption{Aktualizacja widoku}
+			\label{rys:Aktualizacja widoku}
+		\end{center}
+	\end{figure}
+\\
+	Ostatnim krokiem było utworzenie switcha oraz jego mechanizmu działania
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=10cm]{rys/gitchanges4.2.17.png}
+			\caption{Widok XAML dla switcha}
+			\label{rys:Widok XAML dla switcha}
+		\end{center}
+	\end{figure}
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=15cm]{rys/gitchanges4.2.18.png}
+			\caption{Mechanizm działania switcha}
+			\label{rys:Mechanizm działania switcha}
+		\end{center}
+	\end{figure}
+}
+
+\newpage
+\textit
+{
+	Efekt finalny:
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=6cm]{rys/gitchanges4.2.19.png}
+			\caption{Dark mode włączony}
+			\label{rys:Dark mode włączony}
+		\end{center}
+	\end{figure}
+\\
+	\begin{figure}[!htb]
+		\begin{center}
+			\includegraphics[width=6cm]{rys/gitchanges4.2.20.png}
+			\caption{Dark mode wyłączony}
+			\label{rys:Dark mode wyłączony}
+		\end{center}
+	\end{figure}
+}
+
+
+
