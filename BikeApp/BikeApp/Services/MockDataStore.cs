@@ -1,5 +1,7 @@
-﻿using BikeApp.Models;
+﻿using SQLite;
+using BikeApp.Models;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,9 +11,12 @@ namespace BikeApp.Services
     public class MockDataStore : IDataStore<Item>
     {
         readonly List<Item> items;
+        private readonly SQLiteConnection sqlConn;
+        private static readonly string sqlDbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "datastore.db3");
 
         public MockDataStore()
         {
+            /*
             items = new List<Item>()
             {
                 new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
@@ -21,12 +26,19 @@ namespace BikeApp.Services
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
             };
+            */
+            
+
+            sqlConn = new SQLiteConnection(sqlDbPath);
+            sqlConn.CreateTable<Item>();
+
+            items = sqlConn.Table<Item>().ToList();
         }
 
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
-
+            sqlConn.Insert(item);
             return await Task.FromResult(true);
         }
 
@@ -35,6 +47,8 @@ namespace BikeApp.Services
             var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
+            sqlConn.Delete(oldItem.Id);
+            sqlConn.Insert(item);
 
             return await Task.FromResult(true);
         }
@@ -43,17 +57,20 @@ namespace BikeApp.Services
         {
             var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
+            sqlConn.Delete(oldItem.Id);
 
             return await Task.FromResult(true);
         }
 
         public async Task<Item> GetItemAsync(string id)
         {
+            //no need to interact with the database
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
+            //no need to interact with the database
             return await Task.FromResult(items);
         }
     }
