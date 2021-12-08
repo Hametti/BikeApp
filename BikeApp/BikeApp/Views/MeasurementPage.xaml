@@ -11,12 +11,100 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <StackLayout Padding="0, 20, 0, 20">
-            <Label 
-                x:Name="Label1"
-                Text="There will be a measurement page here"
-                FontSize="Medium"
-                HorizontalTextAlignment="Center" />
+        <StackLayout>
+            <Grid 
+                VerticalOptions="Start"
+                Padding="20, 20, 20, 20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Label
+                    x:Name="AccelerometerLabel"
+                    VerticalTextAlignment="Center" 
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Text="Accelerometer"
+                    FontSize="18">
+                </Label>
+                
+                <Switch
+                    x:Name="AccelerometerSwitch"
+                    IsToggled="False"
+                    Toggled="AccelerometerSwitch_Toggled"
+                    OnColor="#878385"
+                    ThumbColor="AliceBlue"
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    VerticalOptions="Center"/>
+
+                <Label
+                    x:Name="ShakeDetectionLabel"
+                    VerticalTextAlignment="Center" 
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    Text="Shake detection"
+                    FontSize="18"
+                    TextColor="White">
+                </Label>
+
+                <Switch
+                    x:Name="ShakeDetectionSwitch"
+                    IsToggled="False"
+                    Toggled="ShakeDetectionSwitch_Toggled"
+                    OnColor="#878385"
+                    ThumbColor="AliceBlue"
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    VerticalOptions="Center"/>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="XAxis"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="X Axis: Unknown"
+                    TextColor="White">
+                </Label>
+                
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="YAxis"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="Y Axis: Unknown"
+                    TextColor="White">
+                </Label>
+                
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="ZAxis"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="Z Axis: Unknown"
+                    TextColor="White">
+                </Label>
+                
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="GForce"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="G force: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="MaximumGForce"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Text="Max G force: Unknown"
+                    TextColor="White">
+                </Label>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
