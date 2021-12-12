@@ -92,6 +92,10 @@
         <ShellContent Route="RoutesPage" ContentTemplate="{DataTemplate local:RoutesPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Map" Icon="route_icon.png">
+        <ShellContent Route="MapPage" ContentTemplate="{DataTemplate local:MapPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Live measurement" Icon="measurement_icon.png">
         <ShellContent Route="MeasurementPage" ContentTemplate="{DataTemplate local:MeasurementPage}" />
     </FlyoutItem>

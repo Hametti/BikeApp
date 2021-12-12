@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BikeApp.Views.MapPage"
+             xmlns:vm="clr-namespace:BikeApp.ViewModels" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:location="clr-namespace:BikeApp.Sensors"
+             x:Name="Content"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:MapViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <maps:Map x:Name="map" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="btnLoadLocation" Text="Update location" Clicked="btnLoadLocation_Clicked" Grid.Row="1" Grid.Column="0"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
