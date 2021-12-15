@@ -1,7 +1,9 @@
-﻿using BikeApp.Views;
+﻿using BikeApp.Services.Alert;
+using BikeApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;

@@ -1,15 +1,23 @@
-﻿using System;
+﻿using Acr.UserDialogs;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BikeApp.Services.Alert
 {
-    public class AlertService : IAlertService
+    public class AlertService
     {
-        public async Task ShowMessage(string message)
+        public static void ShowMessage(string title, string message, string cancel)
         {
-            await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("TestAlert", message, "Ok");
+            var config = new AlertConfig
+            {
+                Title = title,
+                Message = message,
+                OkText = cancel
+            };
+
+            UserDialogs.Instance.AlertAsync(config);
         }
     }
 }

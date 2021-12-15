@@ -10,7 +10,6 @@ namespace BikeApp
         public App()
         {
             Initializer.LoadTheme();
-            DependencyService.Register<Services.Alert.IAlertService, Services.Alert.AlertService>();
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();

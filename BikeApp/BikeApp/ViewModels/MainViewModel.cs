@@ -8,11 +8,8 @@ namespace BikeApp.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private readonly Services.Alert.IAlertService _alertService;
-
         public MainViewModel()
         {
-            _alertService = DependencyService.Get<Services.Alert.IAlertService>();
             Title = "Main page";
 
             //This code segment is part of example how to interact with ViewModel from xaml file(you can find command and method call in MainPage.xaml)
@@ -21,7 +18,7 @@ namespace BikeApp.ViewModels
 
         public void DoSomething()
         {
-            _alertService.ShowMessage("DI works");
+            
         }
 
         //This code segment is part of example how to interact with ViewModel from xaml file(you can find command and method call in MainPage.xaml)

@@ -1,5 +1,7 @@
 ﻿using Acr.UserDialogs;
 using BikeApp.Data.Themes;
+using BikeApp.Sensors;
+using BikeApp.Services.Alert;
 using System;
 using System.ComponentModel;
 using Xamarin.Forms;
@@ -16,18 +18,38 @@ namespace BikeApp.Views
 
         void Button_Clicked(object sender, System.EventArgs e)
         {
-            UserDialogs.Instance.Alert(new AlertConfig
+            var state = TrackingButton.Text;
+            switch(state)
             {
-                Title = "Tracking",
-                Message = "Tracking will be available later",
-                OkText = "Ok"
-            });
+                case "Start tracking":
+                    AlertService.ShowMessage("Tracking", "Tracking enabled", "Ok");
+                    Tracking.Enable();
+                    UpdateButtonText();
+                    break;
+                case "Stop tracking":
+                    AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
+                    Tracking.Disable();
+                    UpdateButtonText();
+                    break;
+                default:
+                    AlertService.ShowMessage("Error", "Switch loop error in TrackingPage.xaml.cs", "Ok");
+                    break;
+            }       
+        }
+
+        private void UpdateButtonText()
+        {
+            if (Tracking.IsEnabled)
+                TrackingButton.Text = "Stop tracking";
+            else
+                TrackingButton.Text = "Start tracking";
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             UpdateLayout();
+            UpdateButtonText();
         }
 
         private void UpdateLayout()
