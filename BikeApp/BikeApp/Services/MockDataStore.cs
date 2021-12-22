@@ -5,12 +5,13 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BikeApp.Services.Alert;
 
 namespace BikeApp.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<Route>
     {
-        readonly List<Item> items;
+        readonly List<Route> items;
         private readonly SQLiteConnection sqlConn;
         private static readonly string sqlDbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "datastore.db3");
 
@@ -30,21 +31,22 @@ namespace BikeApp.Services
             
 
             sqlConn = new SQLiteConnection(sqlDbPath);
-            sqlConn.CreateTable<Item>();
+            sqlConn.CreateTable<Route>();
 
-            items = sqlConn.Table<Item>().ToList();
+            items = sqlConn.Table<Route>().ToList();
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(Route item)
         {
+           
             items.Add(item);
             sqlConn.Insert(item);
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(Route item)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            var oldItem = items.Where((Route arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
             sqlConn.Delete(oldItem.Id);
@@ -55,20 +57,20 @@ namespace BikeApp.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            var oldItem = items.Where((Route arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
             sqlConn.Delete(oldItem.Id);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<Route> GetItemAsync(string id)
         {
             //no need to interact with the database
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Route>> GetItemsAsync(bool forceRefresh = false)
         {
             //no need to interact with the database
             return await Task.FromResult(items);

@@ -1,7 +1,9 @@
-﻿using BikeApp.Data.Themes;
+﻿using BikeApp.Data.Routes;
+using BikeApp.Data.Themes;
 using BikeApp.Models;
 using BikeApp.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -11,31 +13,29 @@ namespace BikeApp.ViewModels
 {
     public class RoutesViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private Route _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public List<Route> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<Route> ItemTapped { get; }
 
         public RoutesViewModel()
         {
             Title = "Your routes";
-            Items = new ObservableCollection<Item>();
+            Items = new List<Route>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-            ItemTapped = new Command<Item>(OnItemSelected);
-
+            ItemTapped = new Command<Route>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
         }
 
         async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
-
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = Routes.AllRoutes;
                 foreach (var item in items)
                 {
                     Items.Add(item);
@@ -57,7 +57,7 @@ namespace BikeApp.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public Route SelectedItem
         {
             get => _selectedItem;
             set
@@ -72,7 +72,7 @@ namespace BikeApp.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(Route item)
         {
             if (item == null)
                 return;

@@ -22,8 +22,9 @@ namespace BikeApp.Sensors
         //Initializing timer
         public static void Initialize()
         {
+            GPSPositions = new List<Position>();
             //10 sec interval
-            timer = new Timer(10000);
+            timer = new Timer(2000);
 
             //Action executed every 10 seconds
             timer.Elapsed += OnTimedEvent;

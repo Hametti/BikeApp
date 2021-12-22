@@ -27,14 +27,25 @@ namespace BikeApp.Views
                     UpdateButtonText();
                     break;
                 case "Stop tracking":
-                    AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
-                    Tracking.Disable();
-                    UpdateButtonText();
+                    if(Tracking.GPSPositions.Count > 1)
+                        AddNewTrail();
+                    else
+                    {
+                        AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
+                        Tracking.Disable();
+                        UpdateButtonText();
+                    }
+                    
                     break;
                 default:
                     AlertService.ShowMessage("Error", "Switch loop error in TrackingPage.xaml.cs", "Ok");
                     break;
             }       
+        }
+
+        private async void AddNewTrail()
+        {
+            await Navigation.PushAsync(new NewItemPage());
         }
 
         private void UpdateButtonText()

@@ -1,5 +1,6 @@
 ﻿using Acr.UserDialogs;
 using BikeApp.Data.Themes;
+using BikeApp.Models;
 using BikeApp.Sensors;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,16 @@ namespace BikeApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MapPage : ContentPage
     {
+
+        public MapPage(Route route)
+        {
+            InitializeComponent();
+
+            ((Map)FindByName("map")).MapElements.Add(route.GetPolyline());
+            ((Map)FindByName("map")).MoveToRegion(new MapSpan(route.MapPath.FirstOrDefault(), 0.01, 0.01));
+            ((Map)FindByName("map")).IsShowingUser = true;
+        }
+
         public MapPage()
         {
             InitializeComponent();
@@ -44,5 +55,7 @@ namespace BikeApp.Views
         {
             ((Map)FindByName("map")).MoveToRegion(new MapSpan(Location.Position, 0.01, 0.01));
         }
+
+        public void AddRoute(Polyline polyline) => ((Map)FindByName("map")).MapElements.Add(polyline);
     }
 }

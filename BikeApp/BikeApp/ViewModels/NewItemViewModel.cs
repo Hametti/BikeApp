@@ -1,4 +1,7 @@
-﻿using BikeApp.Models;
+﻿using BikeApp.Data.Routes;
+using BikeApp.Models;
+using BikeApp.Sensors;
+using BikeApp.Services.Alert;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -49,16 +52,19 @@ namespace BikeApp.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            
+            Route newItem = new Route()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                MapPath = Tracking.GPSPositions
             };
 
-            await DataStore.AddItemAsync(newItem);
-
+            Routes.AllRoutes.Add(newItem);
+            //await DataStore.AddItemAsync(newItem);
             // This will pop the current page off the navigation stack
+            AlertService.ShowMessage("Route", "Your route has been added", "Ok");
             await Shell.Current.GoToAsync("..");
         }
     }

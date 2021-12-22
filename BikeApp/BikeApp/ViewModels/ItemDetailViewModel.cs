@@ -1,6 +1,8 @@
-﻿using BikeApp.Models;
+﻿using BikeApp.Data.Routes;
+using BikeApp.Models;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -9,7 +11,7 @@ namespace BikeApp.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        private string itemId;
+        public string itemId;
         private string text;
         private string description;
         public string Id { get; set; }
@@ -39,11 +41,11 @@ namespace BikeApp.ViewModels
             }
         }
 
-        public async void LoadItemId(string itemId)
+        public void LoadItemId(string itemId)
         {
             try
             {
-                var item = await DataStore.GetItemAsync(itemId);
+                var item = Routes.AllRoutes.FirstOrDefault(r => r.Id == itemId);
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
