@@ -30,7 +30,7 @@ namespace BikeApp.Views
             ((Label)FindByName("Label2")).TextColor = Color.FromHex(CurrentTheme.TextColor);
         }
 
-        private void Switch_Toggled(object sender, ToggledEventArgs isToggled)
+        private void Switch_DarkMode(object sender, ToggledEventArgs isToggled)
         {
             if (isToggled.Value)
                 CurrentTheme.SetTheme(new DarkTheme());
@@ -38,6 +38,14 @@ namespace BikeApp.Views
                 CurrentTheme.SetTheme(new LightTheme());
 
             UpdateLayout();
+        }
+        private void Switch_MeasureBackground(object sender, ToggledEventArgs isToggled)
+        {
+            //...
+        }
+        void Button_SaveChanges(object sender, System.EventArgs e)
+        {
+            //interact with database and save changes, etc.
         }
     }
 }
