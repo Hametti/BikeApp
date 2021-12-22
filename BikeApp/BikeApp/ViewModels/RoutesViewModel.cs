@@ -1,6 +1,7 @@
 ﻿using BikeApp.Data.Routes;
 using BikeApp.Data.Themes;
 using BikeApp.Models;
+using BikeApp.Services.Alert;
 using BikeApp.Views;
 using System;
 using System.Collections.Generic;
@@ -24,12 +25,12 @@ namespace BikeApp.ViewModels
         {
             Title = "Your routes";
             Items = new List<Route>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            LoadItemsCommand = new Command(ExecuteLoadItemsCommand);
             ItemTapped = new Command<Route>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public async void ExecuteLoadItemsCommand()
         {
             IsBusy = true;
             try

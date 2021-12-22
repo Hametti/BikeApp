@@ -1,5 +1,6 @@
 ﻿using BikeApp.Data.Themes;
 using BikeApp.Models;
+using BikeApp.Services.Alert;
 using BikeApp.ViewModels;
 using BikeApp.Views;
 using System;
@@ -29,7 +30,10 @@ namespace BikeApp.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
             UpdateLayout();
+            UpdateItems();
         }
+
+        private void UpdateItems() => ((RoutesViewModel)BindingContext).ExecuteLoadItemsCommand();
 
         private void UpdateLayout()
         {

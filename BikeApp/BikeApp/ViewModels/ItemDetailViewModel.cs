@@ -1,5 +1,8 @@
-﻿using BikeApp.Data.Routes;
+﻿using Acr.UserDialogs;
+using BikeApp.Data.Routes;
 using BikeApp.Models;
+using BikeApp.Services.Alert;
+using BikeApp.Views;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -14,6 +17,39 @@ namespace BikeApp.ViewModels
         public string itemId;
         private string text;
         private string description;
+
+        public ItemDetailViewModel()
+        {
+            DeleteItem = new Command(OnDeleteItem);
+        }
+
+        private void OnDeleteItem()
+        {
+            var confi = new ConfirmConfig();
+            confi.Title = "Route";
+            confi.Message = "Are you sure you want to delete this route?";
+            confi.OkText = "Yes";
+            confi.CancelText = "No";
+            confi.OnAction = b =>
+            {
+                if (b)
+                {
+                    Delete();
+                    Shell.Current.GoToAsync("..");
+                }
+            };
+
+            UserDialogs.Instance.Confirm(confi);
+        }
+
+        private void Delete()
+        {
+            var itemToDelete = Routes.AllRoutes.FirstOrDefault(r => r.Id == itemId);
+            Routes.AllRoutes.Remove(itemToDelete);
+            AlertService.ShowMessage("Route", "Your route has been deleted", "Ok");
+        }
+
+        public Command DeleteItem { get; }
         public string Id { get; set; }
 
         public string Text
