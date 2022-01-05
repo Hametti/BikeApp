@@ -58,6 +58,7 @@ namespace BikeApp.ViewModels
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
                 Description = Description,
+                Seconds = Tracking.Seconds,
                 MapPath = Tracking.GPSPositions
             };
 

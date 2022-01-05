@@ -16,6 +16,8 @@ namespace BikeApp.Sensors
         //This variable stores list of GPS locations collected every 10 seconds
         public static List<Position> GPSPositions { get; set; } = new List<Position>();
 
+        public static int Seconds = 0;
+
         //This property stores state of GPS tracking
         public static bool IsEnabled { get; private set; }
 
@@ -24,7 +26,7 @@ namespace BikeApp.Sensors
         {
             GPSPositions = new List<Position>();
             //10 sec interval
-            timer = new Timer(2000);
+            timer = new Timer(5000);
 
             //Action executed every 10 seconds
             timer.Elapsed += OnTimedEvent;
@@ -64,6 +66,7 @@ namespace BikeApp.Sensors
                     throw new FeatureNotEnabledException();
 
                 GPSPositions.Add(new Position(location.Latitude, location.Longitude));
+                Seconds += 5;
             }
             catch (FeatureNotSupportedException fnsEx)
             {
