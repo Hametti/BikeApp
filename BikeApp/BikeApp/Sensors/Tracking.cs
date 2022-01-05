@@ -60,8 +60,10 @@ namespace BikeApp.Sensors
             {
                 var location = await Geolocation.GetLastKnownLocationAsync();
 
-                if (location != null)
-                    GPSPositions.Add(new Position(location.Latitude, location.Longitude));
+                if (location == null)
+                    throw new FeatureNotEnabledException();
+
+                GPSPositions.Add(new Position(location.Latitude, location.Longitude));
             }
             catch (FeatureNotSupportedException fnsEx)
             {
