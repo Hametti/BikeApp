@@ -70,7 +70,7 @@ namespace BikeApp.Sensors
             }
             catch (FeatureNotEnabledException fneEx)
             {
-                AlertService.ShowMessage("Feature not enabled", "This feature is not enabled", "Ok");
+                AlertService.ShowMessage("Feature not enabled", "Location is not enabled", "Ok");
                 Disable();
             }
             catch (PermissionException pEx)

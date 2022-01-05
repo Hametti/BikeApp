@@ -3,6 +3,7 @@ using BikeApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -22,42 +23,50 @@ namespace BikeApp.Sensors
             {
                 var location = await Geolocation.GetLastKnownLocationAsync();
 
-                if (location != null)
-                    Position = new Position(location.Latitude, location.Longitude);
-
-
-                Polyline polyline = new Polyline
+                if (location == null)
                 {
-                    StrokeColor = Color.Blue,
-                    StrokeWidth = 12,
-                    Geopath =
-                    {
-                        new Position(49.58514665724434, 20.715647442036513),
-                        new Position(49.582826187575115, 20.71954282098077),
-                        new Position(49.582182751417896, 20.72559924868848),
-                        new Position(49.582558380046976, 20.72669359000185),
-                        new Position(49.58553906764385, 20.72585284675587),
-                    }
-                };
+                    Thread.Sleep(2000);
+                    location = await Geolocation.GetLastKnownLocationAsync();
+                    if(location == null)
+                        throw new FeatureNotEnabledException();
+                }
 
-                contentPage.AddRoute(polyline);
+                Position = new Position(location.Latitude, location.Longitude);
+
+                //Polyline polyline = new Polyline
+                //{
+                //    StrokeColor = Color.Blue,
+                //    StrokeWidth = 12,
+                //    Geopath =
+                //    {
+                //        new Position(49.58514665724434, 20.715647442036513),
+                //        new Position(49.582826187575115, 20.71954282098077),
+                //        new Position(49.582182751417896, 20.72559924868848),
+                //        new Position(49.582558380046976, 20.72669359000185),
+                //        new Position(49.58553906764385, 20.72585284675587),
+                //    }
+                //};
+
+                //contentPage.AddRoute(polyline);
                 contentPage.UpdateMap();
+
+                
             }
             catch (FeatureNotSupportedException fnsEx)
             {
-                // Handle not supported on device exception
+                AlertService.ShowMessage("Feature not supported", "This feature is not supported on your device.", "Ok");
             }
             catch (FeatureNotEnabledException fneEx)
             {
-                // Handle not enabled on device exception
+                AlertService.ShowMessage("Location", "Location is not enabled", "Ok");
             }
             catch (PermissionException pEx)
             {
-                // Handle permission exception
+                AlertService.ShowMessage("Permission", "Permission error. Make sure this application has necessary permissions", "Ok");
             }
             catch (Exception ex)
             {
-                // Unable to get location
+                AlertService.ShowMessage("Error", $"Unknown error: {ex.Message}", "Ok");
             }
         }
     }
