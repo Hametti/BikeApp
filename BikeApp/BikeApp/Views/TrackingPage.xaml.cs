@@ -28,7 +28,10 @@ namespace BikeApp.Views
                     break;
                 case "Stop tracking":
                     if(Tracking.GPSPositions.Count > 1)
+                    {
+                        Tracking.Disable();
                         AddNewTrail();
+                    }
                     else
                     {
                         AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
