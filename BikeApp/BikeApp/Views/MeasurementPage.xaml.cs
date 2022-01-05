@@ -1,5 +1,6 @@
 ﻿using BikeApp.Data.Themes;
 using BikeApp.Sensors;
+using BikeApp.Services.Alert;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace BikeApp.Views
         {
             InitializeComponent();
             _accelerometer = new AccelerometerSensor(this);
+
         }
 
         protected override void OnAppearing()

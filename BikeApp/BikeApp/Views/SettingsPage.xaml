@@ -4,7 +4,8 @@
              x:Class="BikeApp.Views.SettingsPage"
              x:Name="Content"
              xmlns:vm="clr-namespace:BikeApp.ViewModels"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Style="{DynamicResource ContentPageStyle}">
 
     <ContentPage.BindingContext>
         <vm:SettingsViewModel />
@@ -16,9 +17,14 @@
                 x:Name="Label1"
                 Text="Exitting this page without saving changes will cancel them!"
                 FontSize="Medium"
-                HorizontalTextAlignment="Center" />
+                HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="../Data/Themes/DarkThemeXaml.xaml"/>
+        <ResourceDictionary Source="../Data/Themes/LightThemeXaml.xaml"/>
+    </ContentPage.Resources>
 
     <!--<StackLayout 
         x:Name="switch"
@@ -39,7 +45,7 @@
 
     </StackLayout>-->
 
-    <Grid 
+    <Grid
         VerticalOptions="Start"
         x:Name="switch"
         Padding="20, 20, 20, 20">
@@ -53,7 +59,8 @@
             Grid.Row="0" 
             Grid.Column="0" 
             Text="Dark mode"
-            FontSize="18">
+            FontSize="18"
+            Style="{DynamicResource LabelStyle}">
         </Label>
         <Switch
             IsToggled="True"

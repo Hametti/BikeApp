@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Data\Themes\LightThemeXaml.xaml.cs">
+      <DependentUpon>LightThemeXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Data\Themes\DarkThemeXaml.xaml.cs">
+      <DependentUpon>DarkThemeXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\RoutesPage.xaml.cs">
       <DependentUpon>RoutesPage.xaml</DependentUpon>
     </Compile>
@@ -23,6 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Data\Themes\LightThemeXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Themes\DarkThemeXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

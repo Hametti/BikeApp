@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BikeApp.Data.Themes.DarkThemeXaml">
+
+    <Color x:Key="DarkThemeBackgroundColor">#222222</Color>
+    <Color x:Key="DarkThemeTextColor">white</Color>
+
+    <Style x:Key="DarkThemeLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DarkThemeTextColor}"/>
+    </Style>
+    <Style x:Key="DarkThemeContentPageStyle" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource DarkThemeBackgroundColor}"/>
+    </Style>
+</ResourceDictionary>

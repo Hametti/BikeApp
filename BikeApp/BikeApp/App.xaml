@@ -6,6 +6,14 @@
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
+        <!--<ResourceDictionary Source="Data/Themes/DarkThemeXaml.xaml"/>-->
+        <Color x:Key="DarkThemeTextColor">white</Color>
+        <Color x:Key="LightThemeTextColor">black</Color>
+        
+        
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Background">#292929</Color>
@@ -32,6 +40,6 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-        </ResourceDictionary>        
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
