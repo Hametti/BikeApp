@@ -17,6 +17,9 @@ namespace BikeApp.ViewModels
         public string itemId;
         private string text;
         private string description;
+        private string totalTime;
+        private string totalDistance;
+        private string averageSpeed;
 
         public ItemDetailViewModel()
         {
@@ -64,6 +67,24 @@ namespace BikeApp.ViewModels
             set => SetProperty(ref description, value);
         }
 
+        public string TotalTime
+        {
+            get => totalTime;
+            set => SetProperty(ref totalTime, value);
+        }
+
+        public string TotalDistance
+        {
+            get => totalDistance;
+            set => SetProperty(ref totalDistance, value);
+        }
+
+        public string AverageSpeed
+        {
+            get => averageSpeed;
+            set => SetProperty(ref averageSpeed, value);
+        }
+
         public string ItemId
         {
             get
@@ -85,6 +106,9 @@ namespace BikeApp.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                TotalTime = item.GetTotalTime();
+                TotalDistance = item.GetDistanceInKm().ToString() + " km";
+                AverageSpeed = item.GetAvgSpeedInKmph().ToString() + " km/h";
             }
             catch (Exception)
             {

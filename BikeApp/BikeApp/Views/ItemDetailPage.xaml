@@ -10,10 +10,21 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
+        <Label Text="Route:" FontSize="Medium" />
         <Label Text="{Binding Text}" FontSize="Small"/>
+        
         <Label Text="Description:" FontSize="Medium" />
         <Label Text="{Binding Description}" FontSize="Small"/>
+        
+        <Label Text="Elapsed time:" FontSize="Medium" />
+        <Label Text="{Binding TotalTime}" FontSize="Small"/>
+
+        <Label Text="Total distance:" FontSize="Medium" />
+        <Label Text="{Binding TotalDistance}" FontSize="Small"/>
+
+        <Label Text="Average speed:" FontSize="Medium" />
+        <Label Text="{Binding AverageSpeed}" FontSize="Small"/>
+
         <Button Text="Display on map" x:Name="ShowOnMapButton" Clicked="ShowOnMapButton_Clicked"/>
     </StackLayout>
     
