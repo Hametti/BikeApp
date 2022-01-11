@@ -4,6 +4,7 @@ using BikeApp.Sensors;
 using BikeApp.Services.Alert;
 using System;
 using System.ComponentModel;
+using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,26 +17,81 @@ namespace BikeApp.Views
             InitializeComponent();
         }
 
+        //Initializing timer
+        private Timer GpsEnabledValidation;
+        public void Initialize()
+        {
+            //10 sec interval
+            GpsEnabledValidation = new Timer(5000);
+
+            //Action executed every 10 seconds
+            GpsEnabledValidation.Elapsed += OnTimedEvent;
+
+            //Auto reset(timer resets every interval)
+            //Enabled(timer triggers event every interval)
+            GpsEnabledValidation.AutoReset = true;
+            GpsEnabledValidation.Enabled = true;
+        }
+
+        public void EnableTimer()
+        {
+            Initialize();
+            IsEnabled = true;
+            GpsEnabledValidation.Start();
+        }
+
+        public void DisableTimer()
+        {
+            GpsEnabledValidation.Dispose();
+        }
+
+        private void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+            if(!Location.IsGpsEnabled())
+            {
+                DisableTimer();
+                if (Tracking.GPSPositions.Count > 1)
+                {
+                    Tracking.Disable();
+                    AddNewTrail();
+                    UpdateButtonText();
+                }
+                else
+                {
+                    AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
+                    Tracking.Disable();
+                    UpdateButtonText();
+                }
+            }
+        }
+
         void Button_Clicked(object sender, System.EventArgs e)
         {
             var state = TrackingButton.Text;
             switch(state)
             {
                 case "Start tracking":
-                    AlertService.ShowMessage("Tracking", "Tracking enabled", "Ok");
-                    Tracking.Enable();
-                    UpdateButtonText();
+                    if (Location.IsGpsEnabled())
+                    {
+                        EnableTimer();
+                        Tracking.Enable();
+                        UpdateButtonText();
+                        AlertService.ShowMessage("Tracking", "Tracking enabled", "Ok");
+                    }
+                    else
+                        AlertService.ShowMessage("Error", "Please enable location", "Ok");
                     break;
                 case "Stop tracking":
                     if(Tracking.GPSPositions.Count > 1)
                     {
                         Tracking.Disable();
                         AddNewTrail();
+                        UpdateButtonText();
                     }
                     else
                     {
-                        AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
                         Tracking.Disable();
+                        AlertService.ShowMessage("Tracking", "Tracking disabled", "Ok");
                         UpdateButtonText();
                     }
                     

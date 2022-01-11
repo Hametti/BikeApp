@@ -1,4 +1,5 @@
 ﻿using BikeApp.Data;
+using BikeApp.Data.Routes;
 using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -11,6 +12,7 @@ namespace BikeApp.ViewModels
         public MainViewModel()
         {
             Title = "Main page";
+            Routes.Load();
 
             //This code segment is part of example how to interact with ViewModel from xaml file(you can find command and method call in MainPage.xaml)
             //ChangeSomething = new Command<object>(ChangeColor);

@@ -63,10 +63,15 @@ namespace BikeApp.ViewModels
             };
 
             Routes.AllRoutes.Add(newItem);
+
+
+            Routes.Save();
             //await DataStore.AddItemAsync(newItem);
             // This will pop the current page off the navigation stack
             AlertService.ShowMessage("Route", "Your route has been added", "Ok");
             await Shell.Current.GoToAsync("..");
         }
+
+        
     }
 }

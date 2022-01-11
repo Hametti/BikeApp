@@ -1,4 +1,5 @@
-﻿using BikeApp.Services.Alert;
+﻿using Android.Locations;
+using BikeApp.Services.Alert;
 using BikeApp.Views;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using Android.Content;
 
 namespace BikeApp.Sensors
 {
@@ -24,12 +26,7 @@ namespace BikeApp.Sensors
                 var location = await Geolocation.GetLastKnownLocationAsync();
 
                 if (location == null)
-                {
-                    Thread.Sleep(2000);
-                    location = await Geolocation.GetLastKnownLocationAsync();
-                    if(location == null)
-                        throw new FeatureNotEnabledException();
-                }
+                    throw new FeatureNotEnabledException();
 
                 Position = new Position(location.Latitude, location.Longitude);
 
@@ -68,6 +65,12 @@ namespace BikeApp.Sensors
             {
                 AlertService.ShowMessage("Error", $"Unknown error: {ex.Message}", "Ok");
             }
+        }
+
+        public static bool IsGpsEnabled()
+        {
+            LocationManager locationManager = (LocationManager)Android.App.Application.Context.GetSystemService(Context.LocationService);
+            return locationManager.IsProviderEnabled(LocationManager.GpsProvider);
         }
     }
 }
