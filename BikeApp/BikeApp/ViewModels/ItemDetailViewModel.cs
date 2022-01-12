@@ -49,6 +49,7 @@ namespace BikeApp.ViewModels
         {
             var itemToDelete = Routes.AllRoutes.FirstOrDefault(r => r.Id == itemId);
             Routes.AllRoutes.Remove(itemToDelete);
+            Routes.Save();
             AlertService.ShowMessage("Route", "Your route has been deleted", "Ok");
         }
 

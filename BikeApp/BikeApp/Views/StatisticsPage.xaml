@@ -12,11 +12,82 @@
 
     <ContentPage.Content>
         <StackLayout Padding="0, 20, 0, 20">
+
             <Label 
-                x:Name="Label1"
-                Text="There will be a statistics page here"
-                FontSize="Medium"
-                HorizontalTextAlignment="Center" />
+                Padding="20,0,0,0"
+                x:Name="StatsTitle"
+                TextColor="White"
+                FontSize="24"
+                Text="Your stats:"/>
+
+            <Grid 
+                VerticalOptions="Start"
+                Padding="20, 0, 20, 20">
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="AvgSpeed"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Average speed: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="AvgTripTime"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Average trip time: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="AvgTripDist"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Average distance: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="MaxDist"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="Maximum distance: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="MinDist"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="Minimum distance: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="LongestRoute"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="Longest route: Unknown"
+                    TextColor="White">
+                </Label>
+
+                <Label
+                    Padding="0, 10, 0, 0"
+                    x:Name="ShortestRoute"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Text="Shortest route: Unknown"
+                    TextColor="White">
+                </Label>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -14,8 +14,8 @@ namespace BikeApp.Data.Routes
             System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(List<Route>));
             System.IO.FileStream file;
 
-            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            AlertService.ShowMessage("Ok", documentsPath, "Ok");
+            //string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            //AlertService.ShowMessage("Ok", documentsPath, "Ok");
 
             file = System.IO.File.Create("data/user/0/student.bikeapp/files/RoutesList");
             writer.Serialize(file, AllRoutes);

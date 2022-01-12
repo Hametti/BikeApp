@@ -19,17 +19,22 @@ namespace BikeApp.Views
     {
         public MainPage()
         {
-            AddSampleRoute();
             InitializeComponent();
+            Routes.Load();
+            //AddSampleRoute();
+            //Routes.Save();
         }
 
         private void AddSampleRoute()
         {
-            var route = new Route()
+            if (Routes.AllRoutes.Count < 1) 
+                return;
+            
+            Route newItem = new Route()
             {
                 Id = Guid.NewGuid().ToString(),
-                Description = "Sample description",
-                Text = "Sample route",
+                Text = "Sample descriptionn",
+                Description = "Sample routee",
                 Seconds = 666,
                 MapPath = new List<Position>
                 {
@@ -41,7 +46,8 @@ namespace BikeApp.Views
                 }
             };
 
-            Routes.AllRoutes.Add(route);
+            Routes.AllRoutes.Add(newItem);
+            Routes.Save();
         }
 
         protected override void OnAppearing()
