@@ -4,7 +4,7 @@
 \subsection{Pierwsze kroki}
 \textit
 {
-	Po stworzeniu projektu poznawaliśmy strukturę oraz działanie aplikacji próbując modyfikować istniejące już klasy. Po zapoznaniu się z podstawami realizowaliśmy dalsze tutoriale aby 			swobodnie pracować w środowisku Xamarin'a.
+	Po stworzeniu projektu poznawaliśmy strukturę oraz działanie aplikacji próbując modyfikować istniejące już klasy. Po zapoznaniu się z podstawami realizowaliśmy dalsze tutoriale aby swobodnie pracować w środowisku Xamarin'a.
 }
 
 \subsection{Modyfikacja menu}
@@ -12,13 +12,12 @@
 \textit
 {
 	Pierwszym zadaniem było ustalenie szaty graficznej, widoku podstawowego z przyciskiem oraz menu. Aby to zrobić należało wykonać następujące czynności:\\\\
-	-Dopisać odpowiednie właściwości do kodu XML typu background color, font-size, padding, textcolor itp. aby wystylizować układ widoku.\\\\
-	Fragment modyfikacji:
+	-Dopisać odpowiednie właściwości do kodu XML, takie jak background color, font-size, padding, textcolor itp., aby wystylizować układ widoku. Na rysunku 4.1 znajduje się fragment wprowadzonych modyfikacji.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges1.png}
-			\caption{Zmiany styli}
-			\label{rys:Zmiany styli}
+			\caption{Dodanie właściwości stylujących widok}
+			\label{rys:Dodanie właściwości stylujących widok}
 		\end{center}
 	\end{figure}
 }
@@ -26,8 +25,7 @@
 \newpage
 \textit
 {
-	-Stworzyć widok główny na podstawie języka XML oraz metody w języku C\# informującej o kliknięciu w przycisk.\\\\
-	Fragment modyfikacji:
+	-Stworzyć widok główny na podstawie języka XML oraz metody w języku C\# informującej o kliknięciu w przycisk (zgodnie z rysunkiem 4.2).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges2.png}
@@ -39,13 +37,12 @@
 
 \textit
 {
-	-Pobrać i zainstalować paczkę 'acr' z nuget packages, zaimplementować opcję alertu, zaktualizować wersję xamarin.forms z 5.0.0.2012 do 5.0.0.2125 z powodu konfliktu biblioteki 				emulującej android w języku java \\\\
-	Zmiany widoczne w kodzie:
+	-Pobrać i zainstalować paczkę 'acr' z NuGet Packages, zaimplementować opcję alertu, zaktualizować wersję Xamarin.forms z 5.0.0.2012 do 5.0.0.2125 z powodu konfliktu biblioteki emulującej system Aandroid w języku Java (rysunek 4.3). \\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges3.png}
-			\caption{Modyfikacja nuget packages}
-			\label{rys:Modyfikacja nuget packages}
+			\caption{Modyfikacja NuGet Packages}
+			\label{rys:Modyfikacja NuGet Packages}
 		\end{center}
 	\end{figure}
 }
@@ -55,7 +52,7 @@
 
 \textit
 {
-	Na początku należało utworzyć odpowiednie widoki aby stworzyć spójny szkielet aplikacji \\
+	Na początku należało utworzyć odpowiednie widoki aby stworzyć spójny szkielet aplikacji oraz stworzyć odpowiadające im modele widoków (rysunki 4.4 oraz 4.5).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=7.5cm]{rys/gitchanges4.2.1.png}
@@ -66,8 +63,7 @@
 }
 
 \textit
-{\\
-	Następnie należało stworzyć odpowiadające im modele widoków\\
+{
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=7.5cm]{rys/gitchanges4.2.2.png}
@@ -80,12 +76,12 @@
 \newpage
 \textit
 {
-	Potem należało ustawić odpowiednie parametry tak aby połączyć poszczególny widok z jego modelem\\
+	Następnym krokiem było ustawienie odpowiednich parametrów w celu połączenia poszczególnych widoków z ich modelami (zastosowano w tym celu dyrektywę Binding). Na rysunku 4.6 zaprezentowano jedną z takich modyfikacji.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.3.png}
-			\caption{Binding ModelView z View}
-			\label{rys:Binding ModelView z View}
+			\caption{Łączenie ModelView z View}
+			\label{rys:Łączenie ModelView z View}
 		\end{center}
 	\end{figure}
 }
@@ -93,7 +89,7 @@
 \newpage
 \textit
 {
-	Kolejnym krokiem było ustawienie odpowiednich opcji flyoutmenu:\\
+	Kolejnym krokiem było ustawienie odpowiednich opcji FlyoutMenu (rysunek 4.7).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.4.png}
@@ -106,19 +102,19 @@
 \newpage
 \textit
 {
-	Po zakończeniu należało stworzyć oraz dodać odpowiednie ikony wraz z tytułami do każdego widoku\\
+	Po zakończeniu zostały stworzone oraz dodane odpowiednie ikony wraz z tytułami do każdego widoku (rysunki od 4.8 do 4.10)\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.5.png}
-			\caption{Dodanie styli}
-			\label{rys:Dodanie styli}
+			\caption{Dodanie ikon}
+			\label{rys:Dodanie ikon}
 		\end{center}
 	\end{figure}
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.6.png}
-			\caption{Dodanie styli}
-			\label{rys:Dodanie styli}
+			\caption{Dodanie tytułów widoków}
+			\label{rys:Dodanie tytułów widoków}
 		\end{center}
 	\end{figure}
 	\begin{figure}[!htb]
@@ -133,7 +129,7 @@
 \newpage
 \textit
 {
-	Na koniec należało wszystko wystylizować oraz poprawić ewentualne błędy w kodzie\\
+	Ostatnim etapem, przedstawionym na rysunku 4.11, było wystylizowanie oraz poprawa ewentualnych błędów w kodzie.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.8.png}
@@ -146,12 +142,12 @@
 \newpage
 \textit
 {
-	Efekt finalny:\\
+	Efekt końcowy został zaprezentowany na rysunku 4.12.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.9.png}
-			\caption{Finalizacja}
-			\label{rys:Finalizacja}
+			\caption{Wygląd menu po ukończeniu prac}
+			\label{rys:Wygląd menu po ukończeniu prac}
 		\end{center}
 	\end{figure}
 }
@@ -161,19 +157,19 @@
 
 \textit
 {
-	Na początku należało utworzyć odpowiednie klasy przechowujące kolory \\
+	Praca została rozpoczęta od utworzenia klas reprezentujących motywy i przechowujących odpowiadające im palety kolorów aplikacji (rysunki od 4.13 do 4.16).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=7.5cm]{rys/gitchanges4.2.10.png}
-			\caption{Układ klas}
-			\label{rys:Układ klas}
+			\caption{Układ klas motywów}
+			\label{rys:Układ klas motywów}
 		\end{center}
 	\end{figure}
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.11.png}
-			\caption{Abstrakcyjna klasa bazowa}
-			\label{rys:Abstrakcyjna klasa bazowa}
+			\caption{Kod abstrakcyjnej klasy bazowej}
+			\label{rys:Kod abstrakcyjnej klasy bazowej}
 		\end{center}
 	\end{figure}
 	\begin{figure}[!htb]
@@ -186,7 +182,7 @@
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.13.png}
-			\caption{Klasa przechowująća aktualny motyw ustawiana na podstawie modelu abstrakcyjnego}
+			\caption{Klasa przechowująca aktualny motyw ustawiana na podstawie modelu abstrakcyjnego}
 			\label{rys:Klasa przechowująca aktualny motyw}
 		\end{center}
 	\end{figure}
@@ -199,7 +195,7 @@
 \textit
 {
 \newpage
-	Kolejnym krokiem było stworzenie klasy przechowującej ustawiony motyw
+	Kolejnym krokiem było stworzenie klasy przechowującej aktywny w danym momencie motyw (rysunek 4.17).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.13.png}
@@ -208,7 +204,7 @@
 		\end{center}
 	\end{figure}
 \\
-	Następnie należało stworzyć metodę inicjalizującą, która ustawia motyw oraz wywołać ją w momencie ładowania aplikacji.
+	Następnie należało stworzyć metodę inicjalizującą ustawiającą motyw (rysunek 4.18) oraz wywołać ją w momencie ładowania aplikacji (rysunek 4.19).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.14.png}
@@ -228,7 +224,7 @@
 \textit
 {
 \newpage
-	Potem należało napisać mechanizm aktualizujący widok po każdym załadowaniu
+	Następnie został stworzony mechanizm aktualizujący widok po każdym załadowaniu, przedstawiony na rysunku 4.20.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.16.png}
@@ -237,19 +233,19 @@
 		\end{center}
 	\end{figure}
 \\
-	Ostatnim krokiem było utworzenie switcha oraz jego mechanizmu działania
+	Na koniec do widoku dodano przełącznik sterujący zmianami motywu wraz z mechanizmem działania (rysunki 4.21 oraz 4.22).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=10cm]{rys/gitchanges4.2.17.png}
-			\caption{Widok XAML dla switcha}
-			\label{rys:Widok XAML dla switcha}
+			\caption{Kod XAML przełącznika}
+			\label{rys:Kod XAML przełącznika}
 		\end{center}
 	\end{figure}
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.18.png}
-			\caption{Mechanizm działania switcha}
-			\label{rys:Mechanizm działania switcha}
+			\caption{Mechanizm działania przełącznika}
+			\label{rys:Mechanizm działania przełącznika}
 		\end{center}
 	\end{figure}
 }
@@ -257,20 +253,20 @@
 \newpage
 \textit
 {
-	Efekt finalny:
+	Rysunki 4.23 oraz 4.24 przedstawiają wygląd przełącznika oraz zmiany wyglądu całego widoku po jego użyciu.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=6cm]{rys/gitchanges4.2.19.png}
-			\caption{Dark mode włączony}
-			\label{rys:Dark mode włączony}
+			\caption{Włączenie trybu ciemnego}
+			\label{rys:Włączenie trybu ciemnego}
 		\end{center}
 	\end{figure}
 \\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=6cm]{rys/gitchanges4.2.20.png}
-			\caption{Dark mode wyłączony}
-			\label{rys:Dark mode wyłączony}
+			\caption{Wyłączenie trybu ciemnego}
+			\label{rys:Wyłączenie trybu ciemnego}
 		\end{center}
 	\end{figure}
 }
