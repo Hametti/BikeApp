@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.29)  12 JAN 2022 11:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.29)  17 JAN 2022 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1238,7 +1238,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [6]
-<rys/main_screen.png, id=119, 602.25pt x 336.50719pt>
+<rys/main_screen.png, id=144, 602.25pt x 336.50719pt>
 File: rys/main_screen.png Graphic file (type png)
 <use rys/main_screen.png>
 Package pdftex.def Info: rys/main_screen.png  used on input line 29.
@@ -1267,7 +1267,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [8]
-<rys/xamarin_structure.png, id=135, 250.68657pt x 249.18094pt>
+<rys/xamarin_structure.png, id=161, 250.68657pt x 249.18094pt>
 File: rys/xamarin_structure.png Graphic file (type png)
 <use rys/xamarin_structure.png>
 Package pdftex.def Info: rys/xamarin_structure.png  used on input line 45.
@@ -1282,7 +1282,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [9 <./rys/xamarin_structure.png>]
-<rys/gitchanges1.png, id=142, 752.0597pt x 563.10374pt>
+<rys/gitchanges1.png, id=168, 752.0597pt x 563.10374pt>
 File: rys/gitchanges1.png Graphic file (type png)
 <use rys/gitchanges1.png>
 Package pdftex.def Info: rys/gitchanges1.png  used on input line 23.
@@ -1301,12 +1301,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [10 <./rys/gitchanges1.png>]
-<rys/gitchanges2.png, id=149, 774.64406pt x 160.34906pt>
+<rys/gitchanges2.png, id=175, 774.64406pt x 160.34906pt>
 File: rys/gitchanges2.png Graphic file (type png)
 <use rys/gitchanges2.png>
 Package pdftex.def Info: rys/gitchanges2.png  used on input line 36.
 (pdftex.def)             Requested size: 426.79134pt x 88.34639pt.
-<rys/gitchanges3.png, id=150, 432.86719pt x 76.78688pt>
+<rys/gitchanges3.png, id=176, 432.86719pt x 76.78688pt>
 File: rys/gitchanges3.png Graphic file (type png)
 <use rys/gitchanges3.png>
 Package pdftex.def Info: rys/gitchanges3.png  used on input line 48.
@@ -1321,12 +1321,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [11 <./rys/gitchanges2.png> <./rys/gitchanges3.png>]
-<rys/gitchanges4.2.1.png, id=160, 182.18062pt x 234.8775pt>
+<rys/gitchanges4.2.1.png, id=185, 182.18062pt x 234.8775pt>
 File: rys/gitchanges4.2.1.png Graphic file (type png)
 <use rys/gitchanges4.2.1.png>
 Package pdftex.def Info: rys/gitchanges4.2.1.png  used on input line 63.
 (pdftex.def)             Requested size: 213.39566pt x 275.1317pt.
-<rys/gitchanges4.2.2.png, id=161, 180.675pt x 140.02313pt>
+<rys/gitchanges4.2.2.png, id=186, 180.675pt x 140.02313pt>
 File: rys/gitchanges4.2.2.png Graphic file (type png)
 <use rys/gitchanges4.2.2.png>
 Package pdftex.def Info: rys/gitchanges4.2.2.png  used on input line 74.
@@ -1341,7 +1341,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [12 <./rys/gitchanges4.2.1.png> <./rys/gitchanges4.2.2.png>]
-<rys/gitchanges4.2.3.png, id=170, 347.04657pt x 161.85469pt>
+<rys/gitchanges4.2.3.png, id=195, 347.04657pt x 161.85469pt>
 File: rys/gitchanges4.2.3.png Graphic file (type png)
 <use rys/gitchanges4.2.3.png>
 Package pdftex.def Info: rys/gitchanges4.2.3.png  used on input line 87.
@@ -1356,7 +1356,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [13 <./rys/gitchanges4.2.3.png>]
-<rys/gitchanges4.2.4.png, id=178, 510.40688pt x 307.1475pt>
+<rys/gitchanges4.2.4.png, id=203, 510.40688pt x 307.1475pt>
 File: rys/gitchanges4.2.4.png Graphic file (type png)
 <use rys/gitchanges4.2.4.png>
 Package pdftex.def Info: rys/gitchanges4.2.4.png  used on input line 100.
@@ -1371,17 +1371,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [14 <./rys/gitchanges4.2.4.png>]
-<rys/gitchanges4.2.5.png, id=185, 351.56343pt x 48.93282pt>
+<rys/gitchanges4.2.5.png, id=210, 351.56343pt x 48.93282pt>
 File: rys/gitchanges4.2.5.png Graphic file (type png)
 <use rys/gitchanges4.2.5.png>
 Package pdftex.def Info: rys/gitchanges4.2.5.png  used on input line 127.
 (pdftex.def)             Requested size: 426.79134pt x 59.40298pt.
-<rys/gitchanges4.2.6.png, id=186, 279.29344pt x 179.16937pt>
+<rys/gitchanges4.2.6.png, id=211, 279.29344pt x 179.16937pt>
 File: rys/gitchanges4.2.6.png Graphic file (type png)
 <use rys/gitchanges4.2.6.png>
 Package pdftex.def Info: rys/gitchanges4.2.6.png  used on input line 127.
 (pdftex.def)             Requested size: 284.52756pt x 182.53435pt.
-<rys/gitchanges4.2.7.png, id=187, 341.77687pt x 83.5622pt>
+<rys/gitchanges4.2.7.png, id=212, 341.77687pt x 83.5622pt>
 File: rys/gitchanges4.2.7.png Graphic file (type png)
 <use rys/gitchanges4.2.7.png>
 Package pdftex.def Info: rys/gitchanges4.2.7.png  used on input line 127.
@@ -1397,7 +1397,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15 <./rys/gitchanges4.2.5.png> <./rys/gitchanges4.2.6.png> <./rys/gitchanges4.
 2.7.png>]
-<rys/gitchanges4.2.8.png, id=198, 614.295pt x 442.65375pt>
+<rys/gitchanges4.2.8.png, id=223, 614.295pt x 442.65375pt>
 File: rys/gitchanges4.2.8.png Graphic file (type png)
 <use rys/gitchanges4.2.8.png>
 Package pdftex.def Info: rys/gitchanges4.2.8.png  used on input line 140.
@@ -1412,7 +1412,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [16 <./rys/gitchanges4.2.8.png>]
-<rys/gitchanges4.2.9.png, id=205, 216.05719pt x 222.8325pt>
+<rys/gitchanges4.2.9.png, id=230, 216.05719pt x 222.8325pt>
 File: rys/gitchanges4.2.9.png Graphic file (type png)
 <use rys/gitchanges4.2.9.png>
 Package pdftex.def Info: rys/gitchanges4.2.9.png  used on input line 153.
@@ -1427,22 +1427,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [17 <./rys/gitchanges4.2.9.png>]
-<rys/gitchanges4.2.10.png, id=212, 170.13562pt x 82.80937pt>
+<rys/gitchanges4.2.10.png, id=237, 170.13562pt x 82.80937pt>
 File: rys/gitchanges4.2.10.png Graphic file (type png)
 <use rys/gitchanges4.2.10.png>
 Package pdftex.def Info: rys/gitchanges4.2.10.png  used on input line 189.
 (pdftex.def)             Requested size: 213.39566pt x 103.8703pt.
-<rys/gitchanges4.2.11.png, id=213, 373.395pt x 221.32687pt>
+<rys/gitchanges4.2.11.png, id=238, 373.395pt x 221.32687pt>
 File: rys/gitchanges4.2.11.png Graphic file (type png)
 <use rys/gitchanges4.2.11.png>
 Package pdftex.def Info: rys/gitchanges4.2.11.png  used on input line 189.
 (pdftex.def)             Requested size: 284.52756pt x 168.65932pt.
-<rys/gitchanges4.2.12.png, id=214, 282.30469pt x 209.28188pt>
+<rys/gitchanges4.2.12.png, id=239, 282.30469pt x 209.28188pt>
 File: rys/gitchanges4.2.12.png Graphic file (type png)
 <use rys/gitchanges4.2.12.png>
 Package pdftex.def Info: rys/gitchanges4.2.12.png  used on input line 189.
 (pdftex.def)             Requested size: 284.52756pt x 210.94508pt.
-<rys/gitchanges4.2.13.png, id=215, 426.84468pt x 371.88937pt>
+<rys/gitchanges4.2.13.png, id=240, 426.84468pt x 371.88937pt>
 File: rys/gitchanges4.2.13.png Graphic file (type png)
 <use rys/gitchanges4.2.13.png>
 Package pdftex.def Info: rys/gitchanges4.2.13.png  used on input line 189.
@@ -1470,12 +1470,12 @@ File: rys/gitchanges4.2.13.png Graphic file (type png)
 <use rys/gitchanges4.2.13.png>
 Package pdftex.def Info: rys/gitchanges4.2.13.png  used on input line 222.
 (pdftex.def)             Requested size: 284.52756pt x 247.91049pt.
-<rys/gitchanges4.2.14.png, id=233, 661.72218pt x 170.13562pt>
+<rys/gitchanges4.2.14.png, id=258, 661.72218pt x 170.13562pt>
 File: rys/gitchanges4.2.14.png Graphic file (type png)
 <use rys/gitchanges4.2.14.png>
 Package pdftex.def Info: rys/gitchanges4.2.14.png  used on input line 222.
 (pdftex.def)             Requested size: 426.79134pt x 109.73273pt.
-<rys/gitchanges4.2.15.png, id=234, 259.7203pt x 67.75313pt>
+<rys/gitchanges4.2.15.png, id=259, 259.7203pt x 67.75313pt>
 File: rys/gitchanges4.2.15.png Graphic file (type png)
 <use rys/gitchanges4.2.15.png>
 Package pdftex.def Info: rys/gitchanges4.2.15.png  used on input line 222.
@@ -1490,17 +1490,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [20 <./rys/gitchanges4.2.14.png>]
-<rys/gitchanges4.2.16.png, id=242, 766.36313pt x 144.54pt>
+<rys/gitchanges4.2.16.png, id=267, 766.36313pt x 144.54pt>
 File: rys/gitchanges4.2.16.png Graphic file (type png)
 <use rys/gitchanges4.2.16.png>
 Package pdftex.def Info: rys/gitchanges4.2.16.png  used on input line 251.
 (pdftex.def)             Requested size: 426.79134pt x 80.49632pt.
-<rys/gitchanges4.2.17.png, id=243, 388.45125pt x 437.38406pt>
+<rys/gitchanges4.2.17.png, id=268, 388.45125pt x 437.38406pt>
 File: rys/gitchanges4.2.17.png Graphic file (type png)
 <use rys/gitchanges4.2.17.png>
 Package pdftex.def Info: rys/gitchanges4.2.17.png  used on input line 251.
 (pdftex.def)             Requested size: 284.52756pt x 320.37555pt.
-<rys/gitchanges4.2.18.png, id=244, 536.75531pt x 175.40532pt>
+<rys/gitchanges4.2.18.png, id=269, 536.75531pt x 175.40532pt>
 File: rys/gitchanges4.2.18.png Graphic file (type png)
 <use rys/gitchanges4.2.18.png>
 Package pdftex.def Info: rys/gitchanges4.2.18.png  used on input line 251.
@@ -1515,12 +1515,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [21 <./rys/gitchanges4.2.15.png> <./rys/gitchanges4.2.16.png>]
-<rys/gitchanges4.2.19.png, id=253, 297.36093pt x 626.34pt>
+<rys/gitchanges4.2.19.png, id=278, 297.36093pt x 626.34pt>
 File: rys/gitchanges4.2.19.png Graphic file (type png)
 <use rys/gitchanges4.2.19.png>
 Package pdftex.def Info: rys/gitchanges4.2.19.png  used on input line 272.
 (pdftex.def)             Requested size: 170.71652pt x 359.57883pt.
-<rys/gitchanges4.2.20.png, id=254, 295.85532pt x 630.85687pt>
+<rys/gitchanges4.2.20.png, id=279, 295.85532pt x 630.85687pt>
 File: rys/gitchanges4.2.20.png Graphic file (type png)
 <use rys/gitchanges4.2.20.png>
 Package pdftex.def Info: rys/gitchanges4.2.20.png  used on input line 272.
@@ -1545,7 +1545,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[23 <./rys/gitchanges4.2.19.png>])
+[23 <./rys/gitchanges4.2.19.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
+
+ []
+
+
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.68669pt, for example:
@@ -1554,7 +1567,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[24 <./rys/gitchanges4.2.20.png>]
+[24 <./rys/gitchanges4.2.20.png>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.68669pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.68669pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
+
+[25]
 
 LaTeX Warning: Empty bibliography on input line 78.
 
@@ -1571,7 +1593,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[25
+[26
 
 ] (./dokument.lot)
 \tf@lot=\write8
@@ -1590,18 +1612,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[26] (./dokument.aux)
-Package rerunfilecheck Info: File `dokument.out' has not changed.
-(rerunfilecheck)             Checksum: DA5F3D7775B37CD2F0B12517A5E90B31;2918.
+[27] (./dokument.aux)
+
+Package rerunfilecheck Warning: File `dokument.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dokument.out':
+(rerunfilecheck)             Before: D705D951A215909F1EA77774415A515E;3534
+(rerunfilecheck)             After:  EE6F8C35154B00F4AF347F7153BE88CF;4917.
 Package logreq Info: Writing requests to 'dokument.run.xml'.
 \openout1 = `dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23738 strings out of 478353
- 406909 string characters out of 5852100
- 1135082 words of memory out of 5000000
- 41408 multiletter control sequences out of 15000+600000
+ 23753 strings out of 478353
+ 407132 string characters out of 5852100
+ 1134085 words of memory out of 5000000
+ 41413 multiletter control sequences out of 15000+600000
  417560 words of font info for 66 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  65i,11n,67p,741b,1704s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1615,10 +1643,10 @@ mf-dist/fonts/type1/public/pl/plr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1
 texmf-dist/fonts/type1/public/pl/plssbx10.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/public/pl/plti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/pl/p
 lti12.pfb>
-Output written on dokument.pdf (26 pages, 504284 bytes).
+Output written on dokument.pdf (27 pages, 508877 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 302 words of extra memory for PDF output out of 10000 (max. 10000000)
 
