@@ -1,56 +1,70 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {polish}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{2}.1}{\ignorespaces Propozycja ekranu głównego\relax }}{7}{figure.caption.1}%
+\contentsline {figure}{\numberline {{2}.1}{\ignorespaces Propozycja ekranu głównego\relax }}{8}{figure.caption.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{3}.1}{\ignorespaces Szkic strony głównej aplikacji\relax }}{8}{figure.caption.2}%
+\contentsline {figure}{\numberline {{3}.1}{\ignorespaces Szkic strony głównej aplikacji\relax }}{9}{figure.caption.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{3}.2}{\ignorespaces Struktura projektu widoczna w programie Visual Studio\relax }}{9}{figure.caption.3}%
+\contentsline {figure}{\numberline {{3}.2}{\ignorespaces Struktura projektu widoczna w programie Visual Studio\relax }}{10}{figure.caption.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.1}{\ignorespaces Dodanie właściwości stylujących widok\relax }}{10}{figure.caption.4}%
+\contentsline {figure}{\numberline {{4}.1}{\ignorespaces Dodanie właściwości stylujących widok\relax }}{11}{figure.caption.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.2}{\ignorespaces Implementacja widoku\relax }}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {{4}.2}{\ignorespaces Implementacja widoku\relax }}{12}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.3}{\ignorespaces Modyfikacja NuGet Packages\relax }}{11}{figure.caption.6}%
+\contentsline {figure}{\numberline {{4}.3}{\ignorespaces Modyfikacja NuGet Packages\relax }}{12}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.4}{\ignorespaces Szkielet widoków\relax }}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {{4}.4}{\ignorespaces Szkielet widoków\relax }}{13}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.5}{\ignorespaces Szkielet modeli widoków\relax }}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {{4}.5}{\ignorespaces Szkielet modeli widoków\relax }}{13}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.6}{\ignorespaces Łączenie ModelView z View\relax }}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {{4}.6}{\ignorespaces Łączenie ModelView z View\relax }}{14}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.7}{\ignorespaces Dodanie opcji menu\relax }}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {{4}.7}{\ignorespaces Dodanie opcji menu\relax }}{15}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.8}{\ignorespaces Dodanie ikon\relax }}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {{4}.8}{\ignorespaces Dodanie ikon\relax }}{16}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.9}{\ignorespaces Dodanie tytułów widoków\relax }}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {{4}.9}{\ignorespaces Dodanie tytułów widoków\relax }}{16}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.10}{\ignorespaces Dodanie styli\relax }}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {{4}.10}{\ignorespaces Dodanie styli\relax }}{16}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.11}{\ignorespaces Finalizacja\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {{4}.11}{\ignorespaces Finalizacja\relax }}{17}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.12}{\ignorespaces Wygląd menu po ukończeniu prac\relax }}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {{4}.12}{\ignorespaces Wygląd menu po ukończeniu prac\relax }}{18}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.13}{\ignorespaces Układ klas motywów\relax }}{18}{figure.caption.16}%
+\contentsline {figure}{\numberline {{4}.13}{\ignorespaces Układ klas motywów\relax }}{19}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.14}{\ignorespaces Kod abstrakcyjnej klasy bazowej\relax }}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {{4}.14}{\ignorespaces Kod abstrakcyjnej klasy bazowej\relax }}{19}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.15}{\ignorespaces Przykładowy motyw dziedziczący po klasie bazowej\relax }}{19}{figure.caption.18}%
+\contentsline {figure}{\numberline {{4}.15}{\ignorespaces Przykładowy motyw dziedziczący po klasie bazowej\relax }}{20}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.16}{\ignorespaces Klasa przechowująca aktualny motyw ustawiana na podstawie modelu abstrakcyjnego\relax }}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {{4}.16}{\ignorespaces Klasa przechowująca aktualny motyw ustawiana na podstawie modelu abstrakcyjnego\relax }}{20}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.17}{\ignorespaces Klasa statyczna przechowująca motyw\relax }}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {{4}.17}{\ignorespaces Klasa statyczna przechowująca motyw\relax }}{21}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.18}{\ignorespaces Klasa inicjalizująca\relax }}{20}{figure.caption.21}%
+\contentsline {figure}{\numberline {{4}.18}{\ignorespaces Klasa inicjalizująca\relax }}{21}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.19}{\ignorespaces Klasa inicjalizująca - wywołanie\relax }}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {{4}.19}{\ignorespaces Klasa inicjalizująca - wywołanie\relax }}{22}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.20}{\ignorespaces Aktualizacja widoku\relax }}{21}{figure.caption.23}%
+\contentsline {figure}{\numberline {{4}.20}{\ignorespaces Aktualizacja widoku\relax }}{22}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.21}{\ignorespaces Kod XAML przełącznika\relax }}{22}{figure.caption.24}%
+\contentsline {figure}{\numberline {{4}.21}{\ignorespaces Kod XAML przełącznika\relax }}{23}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.22}{\ignorespaces Mechanizm działania przełącznika\relax }}{22}{figure.caption.25}%
+\contentsline {figure}{\numberline {{4}.22}{\ignorespaces Mechanizm działania przełącznika\relax }}{23}{figure.caption.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.23}{\ignorespaces Włączenie trybu ciemnego\relax }}{23}{figure.caption.26}%
+\contentsline {figure}{\numberline {{4}.23}{\ignorespaces Włączenie trybu ciemnego\relax }}{24}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {{4}.24}{\ignorespaces Wyłączenie trybu ciemnego\relax }}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {{4}.24}{\ignorespaces Wyłączenie trybu ciemnego\relax }}{25}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.1}{\ignorespaces BikeApp - strona główna\relax }}{26}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.2}{\ignorespaces BikeApp - menu główne\relax }}{27}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.3}{\ignorespaces BikeApp - podstrona śledzenia trasy\relax }}{28}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.4}{\ignorespaces BikeApp - szczegóły trasy\relax }}{29}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.5}{\ignorespaces BikeApp - Mapa Google\relax }}{30}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.6}{\ignorespaces BikeApp - Pomiary chwilowe\relax }}{31}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {{6}.7}{\ignorespaces BikeApp - Podstrona statystyk\relax }}{32}{figure.caption.34}%
