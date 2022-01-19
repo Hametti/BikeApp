@@ -52,11 +52,6 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidKeyStore>true</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\Janek\AppData\Local\Xamarin\Mono for Android\Keystore\student\student.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>student</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>student</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>student</AndroidSigningKeyPass>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
