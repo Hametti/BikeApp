@@ -25,6 +25,8 @@ namespace BikeApp.Droid
             UserDialogs.Init(this);
             LoadApplication(new App());
             CheckAppPermissions();
+            var permissions = new string[] { Manifest.Permission.ReadExternalStorage, Manifest.Permission.WriteExternalStorage, Manifest.Permission.ManageExternalStorage };
+            RequestPermissions(permissions, 1);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

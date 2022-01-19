@@ -21,15 +21,15 @@ namespace BikeApp.Views
         {
             InitializeComponent();
             Routes.Load();
-            //AddSampleRoute();
-            //Routes.Save();
+
+            if(Routes.AllRoutes == null || Routes.AllRoutes.Count == 0)
+                AddSampleRoute();
+
+            Routes.Save();
         }
 
         private void AddSampleRoute()
-        {
-            if (Routes.AllRoutes.Count < 1) 
-                return;
-            
+        {            
             Route newItem = new Route()
             {
                 Id = Guid.NewGuid().ToString(),
@@ -42,8 +42,7 @@ namespace BikeApp.Views
                     new Position(49.582826187575115, 20.71954282098077),
                     new Position(49.582182751417896, 20.72559924868848),
                     new Position(49.582558380046976, 20.72669359000185),
-                    new Position(49.58553906764385, 20.72585284675587),
-                }
+                    new Position(49.58553906764385, 20.72585284675587)}
             };
 
             Routes.AllRoutes.Add(newItem);

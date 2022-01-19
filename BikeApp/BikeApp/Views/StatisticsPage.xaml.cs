@@ -36,14 +36,16 @@ namespace BikeApp.Views
             var minDist = GetMinDistance();
             var longestRoute = GetLongestRoute();
             var shortestRoute = GetShortestRoute();
+            var totalRoutes = Routes.AllRoutes?.Count;
 
             AvgSpeed.Text = "Average speed: " + avgSpeed + " km/h";
             AvgTripTime.Text = "Average trip time: " + avgTripTime;
-            AvgTripDist.Text = "Average trip distnace: " + avgTripDist + " km";
+            AvgTripDist.Text = "Average trip distance: " + avgTripDist + " km";
             MaxDist.Text = "Maximum distance: " + maxDist + " km";
-            MinDist.Text = "Minimum distnace: " + minDist + " km";
+            MinDist.Text = "Minimum distance: " + minDist + " km";
             LongestRoute.Text = "Longest route: " + longestRoute;
             ShortestRoute.Text = "Shortest route: " + shortestRoute;
+            TotalRoutes.Text = $"Total routes: " + totalRoutes;
         }
 
         private string GetShortestRoute()
@@ -73,7 +75,7 @@ namespace BikeApp.Views
             if (route == null)
                 return "Unknown";
             else
-                return route.GetDistanceInKm().ToString();
+                return Math.Round(route.GetDistanceInKm(), 2).ToString();
         }
 
         private string GetMaxDistance()
@@ -83,7 +85,7 @@ namespace BikeApp.Views
             if (route == null)
                 return "Unknown";
             else
-                return route.GetDistanceInKm().ToString();
+                return Math.Round(route.GetDistanceInKm(), 2).ToString();
         }
 
         private string GetAverageTripDistance()
@@ -96,7 +98,7 @@ namespace BikeApp.Views
             foreach (Route route in Routes.AllRoutes)
                 sum += route.GetDistanceInKm();
 
-            return sum.ToString();
+            return Math.Round(sum, 2).ToString();
         }
 
         private string GetAverageTripTime()
@@ -142,7 +144,7 @@ namespace BikeApp.Views
                 totalTime += route.Seconds;
             }
 
-            return (totalDistance / (totalTime / 3600)).ToString();
+            return Math.Round(totalDistance / (totalTime / 3600), 2).ToString();
         }
 
         private void UpdateLayout()
@@ -155,6 +157,7 @@ namespace BikeApp.Views
             ((Label)FindByName("MinDist")).TextColor = Color.FromHex(CurrentTheme.TextColor);
             ((Label)FindByName("LongestRoute")).TextColor = Color.FromHex(CurrentTheme.TextColor);
             ((Label)FindByName("ShortestRoute")).TextColor = Color.FromHex(CurrentTheme.TextColor);
+            ((Label)FindByName("TotalRoutes")).TextColor = Color.FromHex(CurrentTheme.TextColor);
         }
     }
 }

@@ -87,6 +87,16 @@
                     TextColor="White">
                 </Label>
 
+                <Label
+                    Padding="0, 10, 0, 10"
+                    x:Name="TotalRoutes"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Text="Total routes: Unknown"
+                    FontSize="Large"
+                    TextColor="White">
+                </Label>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>

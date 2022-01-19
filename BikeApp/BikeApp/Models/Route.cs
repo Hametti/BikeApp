@@ -69,7 +69,7 @@ namespace BikeApp.Models
             var result = new Polyline
             {
                 StrokeColor = Color.Blue,
-                StrokeWidth = 12,
+                StrokeWidth = 12
             };
 
             foreach (var position in MapPath)
