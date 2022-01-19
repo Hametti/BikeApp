@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.29)  19 JAN 2022 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.29)  19 JAN 2022 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1870,7 +1870,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[35 <./rys/instructions-map.jpg>])
+[35 <./rys/instructions-map.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.68669pt, for example:
@@ -1880,10 +1880,66 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
 [36 <./rys/instructions-measurement.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.68669pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.68669pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
+
+[37 <./rys/instructions-stats.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.68669pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.68669pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
+
+[38]
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
 78.
-
-(c:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
+ (c:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 
@@ -1894,7 +1950,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[37 <./rys/instructions-stats.jpg>] (./dokument.lof [38
+[39] (./dokument.lof [40
 
 ])
 \tf@lof=\write7
@@ -1909,7 +1965,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[39] (./dokument.lot)
+[41] (./dokument.lot)
 \tf@lot=\write8
 \openout8 = `dokument.lot'.
 
@@ -1926,16 +1982,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.68669pt}.
 
-[40] (./dokument.aux)
-Package rerunfilecheck Info: File `dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 6357CB17B68C4297176D5D252E0AF58F;5987.
+[42] (./dokument.aux)
+
+Package rerunfilecheck Warning: File `dokument.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dokument.out':
+(rerunfilecheck)             Before: 6357CB17B68C4297176D5D252E0AF58F;5987
+(rerunfilecheck)             After:  47754B382A94F580476B305A5073206C;6201.
 Package logreq Info: Writing requests to 'dokument.run.xml'.
 \openout1 = `dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24081 strings out of 478353
- 414173 string characters out of 5852100
+ 24084 strings out of 478353
+ 414201 string characters out of 5852100
  1134754 words of memory out of 5000000
  41697 multiletter control sequences out of 15000+600000
  418368 words of font info for 68 fonts, out of 8000000 for 9000
@@ -1954,10 +2016,10 @@ c:/texlive/2021/texmf-dist/fonts/type1/public/pl/plssbx10.pfb><c:/texlive/2021/
 texmf-dist/fonts/type1/public/pl/plti10.pfb><c:/texlive/2021/texmf-dist/fonts/t
 ype1/public/pl/plti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/pl/plt
 t12.pfb>
-Output written on dokument.pdf (40 pages, 792545 bytes).
+Output written on dokument.pdf (42 pages, 795656 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 451 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
  425 words of extra memory for PDF output out of 10000 (max. 10000000)
 

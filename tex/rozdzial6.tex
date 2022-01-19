@@ -114,4 +114,13 @@ Ustawienia aplikacji dostępne są za pośrednictwem menu głównego. Po jego ot
 \\
 Poszczególne opcje dostępne są w postaci przełączników, które można aktywować lub deaktywować poprzez ich użycie. Każda zmiana ustawień zatwierdzana jest natychmiast po jej wystąpieniu.
 
+\newpage
+\subsection{Częste problemy i błędy} %6.8
+Większość problemów składa się z niekompatybilności wersji oraz dziwnego zachowania języka XAML względem języka C\#\\\\
+Podstawowym problemem jest zachowanie się kolekcji w grid'zie znajdującym się z pliku XAML. Aby odświeżyć taką strukturę należy stworzyć zdarzenie w EventHandlerze, przypisać je do pola typu Command, wyczyścić stos zakładek, zaktualizować listę, wejść ponownie na zakładkę z gridem oraz połączyć to z wywołaniem XAML które koniecznie musi się wykonać zanim wczyta się viewmodel. Sposób ten wywołał tyle kłopotów i bugów, że zdecydowaśmy po prostu przeładowywać zakładkę ręcznie po usunięciu elementu z listy.\\\\\\
 
+Kolejnym problemem jest nie do końca poprawne działanie serializacji na telefonie typu android. Mimo że typy proste są bez problemu zapisywane i odczytywane, to typy złożone wczytywane są z wartościami defaultowymi. Prowadzi to do konieczności konwersji do JSON'a, zapisywania struktury w postaci stringa, i ponownego przekonwertowywania po odczytaniu danych. Niestety rozwiązanie to generuje wiele bugów, więc spowodowało trudności w testowaniu aplikacji.\\\\
+
+Problematyczne okazało się również konfigurowanie mapy, która wymagała klucza API od Google. Należało go skonfigurować zgodnie z używaną nazwą paczki i wieloma skomplikowanymi ustawieniami. Mimo poprawnych ustawień mapa nie działa na starszych urządzeniach(np. android 9.0)\\\\
+
+Odświeżanie lokalizacji w trakcie śledzenia również sprawiło wiele problemów. Przy działaniu na jednym wątku aplikacja się zawieszała, generowała różne wyjątki lub zapisywała bezsensowne dane. Rozwiązanie przyszło dopiero po przeniesieniu śledzenia na drugi wątek oraz sygnału zakończenia śledzenia wysyłanego dopiero po zebraniu ostatniego sygnału.

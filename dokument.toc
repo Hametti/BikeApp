@@ -61,8 +61,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.7}Dostosowanie ustawień}{36}{subsection.6.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatura}{37}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Częste problemy i błędy}{37}{subsection.6.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Spis rysunków}{39}{section*.35}%
+\contentsline {section}{Literatura}{39}{subsection.6.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Spis tabel}{40}{section*.35}%
+\contentsline {section}{Spis rysunków}{41}{section*.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Spis tabel}{42}{section*.35}%
