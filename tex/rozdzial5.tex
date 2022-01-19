@@ -1,12 +1,75 @@
 	\newpage
 \section{Testowanie}	%5
 %Opisujemy testy, sprawdzamy czy nie generuje błędów.
-\subsection{Menu} %6.6
+\subsection{Menu} %5.1
 Aby testowanie było bezproblemowe i kompleksowe należy przetestować każdą część aplikacji stopniowo zwiększając stopień skomplikowania. Pierwszym testem będzie działanie menu, składa się on z następującego scenariusza:\\\\
 1)Otworzenie aplikacji\\
 2)Sprawdzenie czy strona główna to widok zaimplementowany w klasie MainPage\\
 3)Sprawdzenie czy każda opcja w menu pokrywa się z zaimplementowanym widokiem\\
 4)Ustawienie aplikacji na działanie w tle, ponowne włączenie, i sprawdzenie czy otwiera się na ostatniej przeglądanej stronie\\
 5)Przełączanie zakładek używając multitoucha\\\\
-Wyniki: Aplikacja działa poprawnie, nie pojawia się żaden bug\\
+Wyniki: Aplikacja działa poprawnie, nie pojawia się żaden bug\\\\
+\newpage
+\subsection{Śledzenie trasy} %5.2
+Scenariusz:\\
+1)Otwarcie zakładki 'Start Tracking'\\
+2)Wciśnięcie przycisku 'Start Tracking'\\
+3)Sprawdzenie czy tekst na przycisku zmienił się na 'Stop Tracking'\\
+4)Wciśnięcie przycisku 'Stop tracking' przed upływem 10 sekund od wciśnięcia 'Start Tracking'\\
+5)Sprawdzenie czy przycisk spowrotem zmienił się na 'Start Tracking' oraz czy aplikacja nie zaproponowała zapisania trasy\\
+6)Ponowne wciśnięcie przycisku 'Start Tracking' i odczekanie 10 sekund\\
+7)Wciśnięcie przycisku 'Stop Tracking'\\
+8)Sprawdzenie czy aplikacja zaproponowała zapisanie trasy\\
+9)Zapisanie trasy\\
+10)Sprawdzenie czy w zakładce 'My routes' została dodana trasa\\
+11)Sprawdzenie czy trasa posiada poprawne wartości GPS z pozycji kodu\\\\
+Wyniki: Wystąpił bug. Śledzenie trasy działa, ale pokazuje na mapie jedynie linię prostą z początku i końca śledzenia.\\\\
+\newpage
+\subsection{Wyświetlanie tras} %5.3
+Scenariusz:\\
+1)Otwarcie zakładki 'Your routes'\\
+2)Sprawdzenie czy wcześniej dodane trasy poprawnie się wyświetlają\\
+3)Sprawdzenie czy po kliknięciu na trasę wyświetlają się jej szczegóły oraz opcja jej usunięcia\\
+4)Kliknięcie 'Display on map' oraz sprawdzenie czy wyświetla się poprawna trasa\\
+5)Kliknięcie 'Delete', przełączenie się spowrotem na zakładkę 'Your routes' i sprawdzenie czy trasa się usunęła\\\\
+Wyniki: Wystąpił bug. Trasa się usuwa, ale lista aktualizuje się dopiero po wyjściu z zakładki 'Your routes' oraz ponownym wejściu.
+\subsection{Mapa} %5.4
+Scenariusz:\\
+1)Otwarcie zakładki 'Map'\\
+2)Sprawdzenie mapa poprawnie się wyświetla\\
+3)Kliknięcie opcji 'Update Location'\\
+4)Sprawdzenie czy lokalizacja została uaktualniona, i czy aplikacja wycentrowała mapę na aktualnej lokalizacji\\
+5)Sprawdzenie czy działa zoom za pomocą przycisków z ikonami + i -, oraz za pomocą gestu\\
+6)Sprawdzenie czy działa uaktualnianie lokalizacji za pomocą ikony w prawym górnym rogu \\\\
+Wyniki: Aplikacja działa poprawnie, nie pojawia się żaden bug\\\\
+\newpage
+\subsection{Pomiar rzeczywisty} %5.5
+Scenariusz:\\
+1)Otwarcie zakładki 'Live measurements'\\
+2)Włączenie akcelerometra za pomocą slidera\\
+3)Sprawdzenie czy po odpowiednim obrocie telefonu wartości się poprawnie wyświetlają. Wartość powinna wynosić zero jeśli telefon jest ustawiany prostopadle do siły grawitacji względem odczytywanej osi\\
+4)Podrzucenie telefonu i sprawdzenie czy zmieniła się wartość maksymalnego zanotowanego przeciążenia G\\
+5)Włączenie funkcji 'Shake Detection'\\
+6)Kilkukrotne potrzęsienie telefonem i sprawdzenie czy pojawiło się okno z powiadomieniem 'Shake detected'
+Wyniki: Aplikacja działa poprawnie, nie pojawia się żaden bug.
+
+\subsection{Statystyki} %5.6
+Scenariusz:\\
+1)Dodanie za pomocą kodu tras z tak policzonymi wartościami aby dało się porównać ich statystyki liczone za pomocą aplikacji z wynikiem rzeczywistym\\
+2)Otwarcie zakładki 'Statistics'\\
+3)Sprawdzenie czy wszystkie pola tekstowe wyświetlają poprawne wartości(maksymalnie 2 miejsca po przecinku, poprawny format czasowy)\\
+4)Porównanie wyników pokazywanych przez aplikacje z rzeczywistymi obliczeniami średnich na podstawie dodanych tras\\\\
+Wyniki: Aplikacja działa poprawnie, nie pojawił się żaden bug\\\\
+
+\newpage
+\subsection{Ustawienia} %5.7
+Scenariusz:\\
+1)Uruchomienie aplikacji, sprawdzenie czy domyślnie jest włączony tryb ciemny\\
+2)Otwarcie zakładki 'Settings'\\
+3)Wyłączenie trybu ciemnego za pomocą slidera\\
+4)Otwarcie po kolei każdej z zakładek i sprawdzenie czy tło jak i tekst wyświetlają się poprawnie w trybie jasnym\\
+5)Otwarcie zakładki 'Settings'\\
+6)Ponowne włączenie trybu ciemnego za pomocą slidera\\
+7)Przejście po kolei każdej z zakładek i sprawdzenie czy tło jak i tekst wyświetlają się poprawnie w trybie ciemnym
+Wyniki: Aplikacja działa poprawnie, nie pojawił się żaden bug\\\\
 
