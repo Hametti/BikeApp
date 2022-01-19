@@ -4,7 +4,7 @@
 \subsection{Pierwsze kroki}
 \textit
 {
-	Po stworzeniu projektu poznawaliśmy strukturę oraz działanie aplikacji próbując modyfikować istniejące już klasy. Po zapoznaniu się z podstawami realizowaliśmy dalsze tutoriale aby swobodnie pracować w środowisku Xamarin'a.
+	Po stworzeniu projektu poznawaliśmy strukturę oraz działanie aplikacji próbując modyfikować istniejące już klasy. Po zapoznaniu się z podstawami realizowaliśmy dalsze tutoriale\cite{xamarinandroid_getstarted}\cite{xamarinandroid_layouts} aby swobodnie pracować w środowisku Xamarin'a.
 }
 
 \subsection{Modyfikacja menu}
@@ -12,7 +12,7 @@
 \textit
 {
 	Pierwszym zadaniem było ustalenie szaty graficznej, widoku podstawowego z przyciskiem oraz menu. Aby to zrobić należało wykonać następujące czynności:\\\\
-	-Dopisać odpowiednie właściwości do kodu XML, takie jak background color, font-size, padding, textcolor itp., aby wystylizować układ widoku. Na rysunku 4.1 znajduje się fragment wprowadzonych modyfikacji.\\
+	- Dopisać odpowiednie właściwości do kodu XML, takie jak background color, font-size, padding, textcolor itp., aby wystylizować układ widoku. Na rysunku 4.1 znajduje się fragment wprowadzonych modyfikacji.\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges1.png}
@@ -25,7 +25,7 @@
 \newpage
 \textit
 {
-	-Stworzyć widok główny na podstawie języka XML oraz metody w języku C\# informującej o kliknięciu w przycisk (zgodnie z rysunkiem 4.2).\\
+	- Stworzyć widok główny na podstawie języka XML oraz metody w języku C\# informującej o kliknięciu w przycisk (zgodnie z rysunkiem 4.2).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges2.png}
@@ -37,7 +37,7 @@
 
 \textit
 {
-	-Pobrać i zainstalować paczkę 'acr' z NuGet Packages, zaimplementować opcję alertu, zaktualizować wersję Xamarin.forms z 5.0.0.2012 do 5.0.0.2125 z powodu konfliktu biblioteki emulującej system Aandroid w języku Java (rysunek 4.3). \\
+	- Pobrać i zainstalować paczkę 'acr' z NuGet Packages, zaimplementować opcję alertu, zaktualizować wersję Xamarin.forms z 5.0.0.2012 do 5.0.0.2125 z powodu konfliktu biblioteki emulującej system Aandroid w języku Java (rysunek 4.3). \\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges3.png}
@@ -89,7 +89,7 @@
 \newpage
 \textit
 {
-	Kolejnym krokiem było ustawienie odpowiednich opcji FlyoutMenu (rysunek 4.7).\\
+	Kolejnym krokiem było ustawienie odpowiednich opcji FlyoutMenu (rysunek~4.7).\\
 	\begin{figure}[!htb]
 		\begin{center}
 			\includegraphics[width=15cm]{rys/gitchanges4.2.4.png}
@@ -189,7 +189,9 @@
 }
 {
 \newpage
+\textit{
 	Motyw to klasa dziedzicząca po klasie bazowej z odpowiednio skonfigurowanym konstruktorem, dzięki takiej konstrukcji w razie potrzeby dodania kolejnych motywów nie ma potrzeby modyfikacji klasy głównej. Wystarczy dodać dowolną liczbę nowych motywów w postaci klas oraz przypisać obiekt nowo powstałej klasy w klasie inicjalizującej.
+}
 }
 
 \textit

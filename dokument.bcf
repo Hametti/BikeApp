@@ -2344,6 +2344,9 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">xamarinandroid</bcf:citekey>
+    <bcf:citekey order="2">xamarinandroid_getstarted</bcf:citekey>
+    <bcf:citekey order="3">xamarinandroid_layouts</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
